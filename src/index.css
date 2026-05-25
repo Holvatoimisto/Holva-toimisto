@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #18314F;
+    --bg-secondary: #0D0630;
+    --accent-gold: #C8AC4B;
+    --accent-teal: #8BBEB2;
+    --accent-lime: #E6FF9F;
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.72);
+    --text-muted: rgba(255, 255, 255, 0.45);
+    --gold-glow: rgba(200, 172, 75, 0.35);
+    --teal-glow: rgba(139, 190, 178, 0.25);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.10);
+    --form-bg: #FFFFFF;
+    --form-text: #0D0630;
+    --form-placeholder: rgba(13, 6, 48, 0.45);
+    --nav-height: 60px;
+
+    /* Card elevation system */
+    --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    --card-shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.20);
+    --card-radius: 16px;
+
+    /* Spacing system */
+    --section-py: 120px;
+    --section-px: 48px;
+    --content-max: 1200px;
+
+    --background: 220 54% 20%;
+    --foreground: 0 0% 100%;
+    --card: 220 54% 20%;
+    --card-foreground: 0 0% 100%;
+    --popover: 260 73% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 44 52% 54%;
+    --primary-foreground: 260 73% 11%;
+    --secondary: 260 73% 11%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 260 73% 11%;
+    --muted-foreground: 0 0% 100% / 0.45;
+    --accent: 44 52% 54%;
+    --accent-foreground: 260 73% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.10;
+    --input: 0 0% 100% / 0.10;
+    --ring: 44 52% 54%;
+    --radius: 0.625rem;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2 {
+    font-family: 'Instrument Serif', serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Instrument Serif', serif;
+  }
+  .font-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+/* cache bust 1779647548 */
