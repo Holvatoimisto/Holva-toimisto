@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { useModal } from "@/context/ModalContext";
 import CaseStudyBackRoom from "@/sections/CaseStudyBackRoom";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -257,6 +258,7 @@ export default function CaseEsimerkit() {
 
   return (
     <div style={{ paddingTop: "var(--nav-height)" }}>
+      <SEO title="Case-esimerkit" description="Tutustu Holva Toimiston aikaisempiin projekteihin — selkeitä ja toimivia verkkosivustoja hyvinvointialalle." canonical="/case-esimerkit" />
       {/* Header */}
       <section
         className="relative"

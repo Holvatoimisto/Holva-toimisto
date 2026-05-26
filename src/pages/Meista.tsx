@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { ArrowLeft } from "lucide-react";
 import FinalCTA from "@/sections/FinalCTA";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -96,6 +97,7 @@ export default function Meista() {
 
   return (
     <div style={{ paddingTop: "var(--nav-height)" }}>
+      <SEO title="Meistä" description="Tutustu Holva Toimistoon — rakennamme premium-verkkosivustoja hyvinvointibrändeille." canonical="/meista" />
       {/* Hero */}
       <section
         className="relative flex flex-col items-center justify-center px-6 text-center"

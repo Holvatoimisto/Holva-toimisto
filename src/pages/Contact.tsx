@@ -3,6 +3,7 @@ import { Mail, CheckCircle, Loader2, ChevronDown } from "lucide-react";
 import { useForm } from "@formspree/react";
 import gsap from "gsap";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 /* ── Reusable input style ─────────────────────────────── */
 const inputBase = {
@@ -238,6 +239,7 @@ export default function Contact() {
 
   return (
     <div>
+      <SEO title="Ota yhteyttä" description="Ota yhteyttä Holva Toimistoon — pyydä ilmainen demo tai kysy lisää verkkosivuistasi." canonical="/ota-yhteytta" />
       {/* Hero */}
       <section className="relative" style={{ paddingTop: "calc(var(--nav-height) + 80px)", paddingBottom: "60px", backgroundColor: "#091525" }}>
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.10) 50%, transparent 100%)" }} />
