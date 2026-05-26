@@ -142,7 +142,7 @@ export default function Testimonials() {
           {/* ── Soft CTA ── */}
           <div className="t-anim mt-8 text-center">
             <a
-              href="https://www.google.fi/search?sa=X&sca_esv=cfa98b4e37d39014&sxsrf=ANbL-n7HT_MNdmMLNK6U5-H3Qx6N3opgRw:1779731147661&q=Holva+Toimisto+Arvostelut&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NTY0Nrc0MTYxNzAzswQCE8MNjIyvGCU98nPKEhVC8jNzM4tL8hUci8ryi0tSc0pLFrHilgMArkAS91IAAAA&rldimm=5313794347066999941&tbm=lcl&hl=fi-FI&ved=2ahUKEwjcmuiW_9SUAxUyU1UIHXwLGsYQ9fQKegQIOhAG&biw=1280&bih=585&dpr=1.5#lkt=LocalPoiReviews"
+              href="https://www.google.com/search?q=Holva+Toimisto+arvostelut&tbm=lcl"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-[12px] font-light tracking-wide transition-colors duration-300"

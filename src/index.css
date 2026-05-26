@@ -55,12 +55,17 @@
     --radius: 0.625rem;
   }
 
+  html, body {
+    overflow-x: hidden;
+  }
+
   body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-width: 100%;
   }
 
   h1, h2 {

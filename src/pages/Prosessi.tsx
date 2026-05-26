@@ -199,29 +199,17 @@ export default function Prosessi() {
 
       {/* Steps Timeline */}
       <section
-        className="relative"
+        className="relative px-5 py-20 md:px-12 md:py-[120px]"
         style={{
           backgroundColor: "var(--bg-primary)",
-          padding: "120px 48px",
         }}
       >
         <div className="mx-auto max-w-[800px]" ref={stepsRef}>
           <div className="relative">
-            {/* Timeline line */}
+            {/* Timeline line — desktop centered, mobile left */}
             <div
-              className="timeline-line absolute hidden md:left-1/2 md:block md:-translate-x-1/2"
+              className="timeline-line absolute left-5 top-0 bottom-0 w-0.5 md:left-1/2 md:w-0.5 md:-translate-x-1/2"
               style={{
-                top: 0,
-                bottom: 0,
-                width: "2px",
-                backgroundColor: "rgba(200, 172, 75, 0.20)",
-                transformOrigin: "top",
-              }}
-            />
-            <div
-              className="timeline-line absolute left-7 top-0 bottom-0 block md:hidden"
-              style={{
-                width: "2px",
                 backgroundColor: "rgba(200, 172, 75, 0.20)",
                 transformOrigin: "top",
               }}
@@ -231,7 +219,7 @@ export default function Prosessi() {
               {steps.map((step, i) => (
                 <div
                   key={i}
-                  className={`step-item relative flex items-start gap-6 md:gap-0 ${
+                  className={`step-item relative flex items-start gap-0 pl-12 md:pl-0 md:gap-0 ${
                     i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
@@ -242,12 +230,11 @@ export default function Prosessi() {
                     }`}
                   >
                     <div
-                      className="transition-all duration-300"
+                      className="p-5 transition-all duration-300 md:p-8"
                       style={{
                         backgroundColor: "var(--card-bg)",
                         border: "1px solid var(--card-border)",
                         borderRadius: "16px",
-                        padding: "32px",
                         boxShadow: "0 4px 24px rgba(0, 0, 0, 0.10)",
                       }}
                       onMouseEnter={(e) => {
@@ -284,8 +271,6 @@ export default function Prosessi() {
                             className="text-sm leading-relaxed"
                             style={{
                               color: "rgba(148,163,184,0.65)",
-                              paddingLeft: i % 2 === 0 ? "0px" : "0px",
-                              paddingRight: i % 2 === 0 && window.innerWidth >= 768 ? "0px" : "0px",
                             }}
                           >
                             – {b}
@@ -301,16 +286,16 @@ export default function Prosessi() {
                     </div>
                   </div>
 
-                  {/* Number circle */}
+                  {/* Number circle — mobile: smaller, left-aligned; desktop: centered */}
                   <div
-                    className="absolute left-7 z-10 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full md:left-1/2 md:-translate-x-1/2"
+                    className="absolute left-5 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full md:left-1/2 md:h-14 md:w-14 md:-translate-x-1/2"
                     style={{
                       backgroundColor: "var(--accent-gold)",
                       color: "var(--bg-secondary)",
-                      boxShadow: "0 0 0 6px var(--bg-primary)",
+                      boxShadow: "0 0 0 4px var(--bg-primary)",
                     }}
                   >
-                    <span className="text-xl font-bold">{step.number}</span>
+                    <span className="text-base font-bold md:text-xl">{step.number}</span>
                   </div>
 
                   {/* Spacer */}
@@ -325,10 +310,9 @@ export default function Prosessi() {
       {/* Trust Badges */}
       <section
         ref={badgesRef}
-        className="relative"
+        className="relative px-5 py-20 md:px-12 md:py-[120px]"
         style={{
           backgroundColor: "var(--bg-secondary)",
-          padding: "120px 48px",
         }}
       >
         <div
