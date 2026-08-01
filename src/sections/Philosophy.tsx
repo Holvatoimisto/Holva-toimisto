@@ -35,22 +35,22 @@ export default function Philosophy() {
     <section
       ref={sectionRef}
       className="relative z-10"
-      style={{ padding: "140px 24px 100px", backgroundColor: "#091525" }}
+      style={{ padding: "140px 24px 100px", backgroundColor: "var(--background-emphasis)" }}
     >
       {/* Subtle top divider */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.06) 50%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, rgba(163,122,70,0.20) 50%, transparent 100%)",
         }}
       />
 
       <div className="relative mx-auto" style={{ maxWidth: "620px" }}>
         {/* Eyebrow — centered */}
         <p
-          className="phi-anim text-[11px] font-normal uppercase tracking-[0.2em]"
-          style={{ color: "rgba(200,172,75,0.50)" }}
+          className="phi-anim text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+          style={{ color: "var(--text-inverse-secondary)" }}
         >
           Mitä teemme erilailla
         </p>
@@ -59,7 +59,7 @@ export default function Philosophy() {
         <h2
           className="phi-anim mx-auto mt-6 text-center"
           style={{
-            color: "var(--text-primary)",
+            color: "var(--text-inverse)",
             fontFamily: "'Instrument Serif', serif",
             fontSize: "clamp(1.7rem, 3.6vw, 2.4rem)",
             lineHeight: 1.18,
@@ -76,10 +76,10 @@ export default function Philosophy() {
         {/* Body — centered container, left-aligned text */}
         <div className="phi-anim" style={{ maxWidth: "480px", margin: "0 auto", textAlign: "left" }}>
           <p
-            className="text-[14px] leading-[1.75] font-light"
-            style={{ color: "rgba(148,163,184,0.65)" }}
+            className="text-[16px] leading-[1.65] font-normal lg:text-[17px]"
+            style={{ color: "var(--text-inverse-secondary)" }}
           >
-            Hyvinvointialalla luottamus ei synny siitä, että kaikki näyttää viimeistellyltä. Se syntyy siitä, että verkkosivusto tuntuu aidosti yrityksenne näköiseltä.
+            Palvelualalla luottamus ei synny siitä, että kaikki näyttää viimeistellyltä. Se syntyy siitä, että verkkosivusto välittää palvelun laadun, rakentaa luottamusta ja ohjaa yhteydenottoon.
           </p>
         </div>
 
@@ -89,14 +89,14 @@ export default function Philosophy() {
             style={{
               width: "28px",
               height: "1px",
-              background: "rgba(200,172,75,0.16)",
+              background: "rgba(163,122,70,0.26)",
               margin: "0 auto 20px",
             }}
           />
           {/* First line — softer */}
           <p
             style={{
-              color: "rgba(226, 232, 240, 0.50)",
+              color: "var(--text-inverse-secondary)",
               fontFamily: "'Instrument Serif', serif",
               fontSize: "clamp(1.2rem, 2.4vw, 1.6rem)",
               lineHeight: 1.4,
@@ -109,14 +109,14 @@ export default function Philosophy() {
           <p
             className="mt-1"
             style={{
-              color: "rgba(226, 232, 240, 0.82)",
+              color: "var(--text-inverse)",
               fontFamily: "'Instrument Serif', serif",
               fontSize: "clamp(1.3rem, 2.6vw, 1.75rem)",
               lineHeight: 1.35,
               letterSpacing: "-0.02em",
             }}
           >
-            Tuomme sen vain <span style={{ color: "rgba(200,172,75,0.75)" }}>selkeämmin</span> esiin.
+            Tuomme sen vain <span style={{ color: "var(--accent-primary)" }}>selkeämmin</span> esiin.
           </p>
         </div>
       </div>

@@ -161,15 +161,15 @@ export default function FloatingPortfolioCards() {
                 borderRadius: isFeatured ? "24px" : isAmbient ? "18px" : "20px",
                 boxShadow: isHovered
                   ? isFeatured
-                    ? "0 40px 100px rgba(0, 0, 0, 0.50), 0 0 0 1px rgba(200, 172, 75, 0.25)"
+            ? "0 40px 100px rgba(51, 46, 37, 0.50), 0 0 0 1px rgba(163, 122, 70, 0.25)"
                     : isAmbient
-                      ? "0 24px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(200, 172, 75, 0.18)"
-                      : "0 32px 80px rgba(0, 0, 0, 0.48), 0 0 0 1px rgba(200, 172, 75, 0.20)"
+              ? "0 24px 60px rgba(51, 46, 37, 0.45), 0 0 0 1px rgba(163, 122, 70, 0.18)"
+              : "0 32px 80px rgba(51, 46, 37, 0.48), 0 0 0 1px rgba(163, 122, 70, 0.20)"
                   : isFeatured
-                    ? `0 ${16 + card.zIndex * 4}px ${40 + card.zIndex * 8}px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.07)`
+                    ? `0 ${16 + card.zIndex * 4}px ${40 + card.zIndex * 8}px rgba(51, 46, 37, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.07)`
                     : isAmbient
-                      ? `0 ${6 + card.zIndex * 2}px ${20 + card.zIndex * 4}px rgba(0, 0, 0, 0.28)`
-                      : `0 ${10 + card.zIndex * 3}px ${28 + card.zIndex * 6}px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.05)`,
+                      ? `0 ${6 + card.zIndex * 2}px ${20 + card.zIndex * 4}px rgba(51, 46, 37, 0.28)`
+                      : `0 ${10 + card.zIndex * 3}px ${28 + card.zIndex * 6}px rgba(51, 46, 37, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.05)`,
                 transition: "box-shadow 0.55s ease-out, border-radius 0.4s ease",
               }}
             >
@@ -188,7 +188,7 @@ export default function FloatingPortfolioCards() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(180deg, transparent 50%, rgba(13, 6, 48, 0.30) 100%)",
+              "linear-gradient(180deg, transparent 50%, rgba(51, 46, 37, 0.30) 100%)",
                     opacity: isHovered ? 0.08 : isFeatured ? 0.25 : isAmbient ? 0.55 : 0.40,
                     transition: "opacity 0.6s ease-out",
                   }}

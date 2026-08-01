@@ -62,7 +62,7 @@ export default function HeroAndProblem() {
   }, []);
 
   return (
-    <div ref={wrapperRef} className="relative" style={{ backgroundColor: "#091525" }}>
+    <div ref={wrapperRef} className="relative" style={{ backgroundColor: "var(--background-emphasis)" }}>
 
       {/* ═══════ HERO — with self-contained background layer ═══════ */}
       <section
@@ -92,7 +92,7 @@ export default function HeroAndProblem() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(105deg, rgba(9,21,37,0.88) 0%, rgba(9,21,37,0.55) 42%, rgba(9,21,37,0.12) 100%)",
+                "linear-gradient(105deg, rgba(51,46,37,0.92) 0%, rgba(51,46,37,0.72) 42%, rgba(51,46,37,0.34) 100%)",
             }}
           />
           {/* Atmospheric glow */}
@@ -104,7 +104,7 @@ export default function HeroAndProblem() {
               left: "-8%",
               top: "8%",
               background:
-                "radial-gradient(ellipse at center, rgba(200, 172, 75, 0.035) 0%, transparent 70%)",
+                "radial-gradient(ellipse at center, rgba(163, 122, 70, 0.08) 0%, transparent 70%)",
             }}
           />
         </div>
@@ -121,10 +121,10 @@ export default function HeroAndProblem() {
           <div ref={leftRef} className="max-w-[600px]">
             {/* Eyebrow */}
             <p
-              className="hero-animate mb-3 text-[11px] font-normal uppercase tracking-[0.16em]"
-              style={{ color: "rgba(200, 172, 75, 0.65)" }}
+              className="hero-animate mb-3 text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+              style={{ color: "var(--text-inverse-secondary)" }}
             >
-              Premium verkkosivut hyvinvointibrändeille
+              Premium-verkkosivut palveluyrityksille
             </p>
 
             {/* Subtle glow behind headline */}
@@ -136,7 +136,7 @@ export default function HeroAndProblem() {
                 left: "-60px",
                 top: "60px",
                 background:
-                  "radial-gradient(ellipse at center, rgba(200, 172, 75, 0.04) 0%, transparent 70%)",
+                  "radial-gradient(ellipse at center, rgba(163, 122, 70, 0.08) 0%, transparent 70%)",
                 zIndex: -1,
               }}
             />
@@ -145,10 +145,10 @@ export default function HeroAndProblem() {
             <h1
               className="hero-animate text-[2.2rem] leading-[1.05] sm:text-[2.6rem] lg:text-[3rem]"
               style={{
-                color: "var(--text-primary)",
+                color: "var(--text-inverse)",
                 fontFamily: "'Instrument Serif', serif",
                 letterSpacing: "-0.02em",
-                textShadow: "0 0 80px rgba(200, 172, 75, 0.06)",
+                textShadow: "0 0 80px rgba(163, 122, 70, 0.08)",
               }}
             >
               Verkkosivustoja, jotka tuntuvat yhtä laadukkailta kuin palvelunne
@@ -157,8 +157,8 @@ export default function HeroAndProblem() {
 
             {/* Supporting text */}
             <p
-              className="hero-animate mt-6 max-w-[460px] text-[15px] leading-[1.65] font-light"
-              style={{ color: "var(--text-secondary)" }}
+              className="hero-animate mt-6 max-w-[460px] text-[16px] leading-[1.65] font-normal lg:text-[17px]"
+              style={{ color: "var(--text-inverse-secondary)" }}
             >
               Rakennamme sivustoja, jotka auttavat kävijää ymmärtämään
               nopeasti miksi juuri teihin kannattaa ottaa yhteyttä.
@@ -168,47 +168,16 @@ export default function HeroAndProblem() {
             <div className="hero-animate mt-6 flex flex-wrap items-center gap-4">
               <button
                 onClick={openModal}
-                className="rounded-[10px] px-9 py-[11px] text-[13px] font-normal tracking-wide transition-all duration-300"
-                style={{
-                  backgroundColor: "var(--accent-gold)",
-                  color: "var(--bg-secondary)",
-                  letterSpacing: "0.02em",
-                  boxShadow: "0 4px 20px rgba(200, 172, 75, 0.18)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#D4B85A";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 28px rgba(200, 172, 75, 0.35)";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--accent-gold)";
-                  e.currentTarget.style.boxShadow =
-                    "0 4px 20px rgba(200, 172, 75, 0.18)";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
+                className="editorial-button editorial-button-primary-inverse rounded-[10px] px-9 py-[11px] transition-all duration-300"
+                style={{ boxShadow: "0 4px 20px rgba(51, 46, 37, 0.22)" }}
               >
                 Pyydä demo
               </button>
 
               <Link
                 to="/case-esimerkit"
-                className="inline-flex items-center gap-2 rounded-[10px] px-6 py-[10px] text-[13px] font-normal tracking-wide transition-all duration-300"
-                style={{
-                  color: "var(--accent-gold)",
-                  letterSpacing: "0.02em",
-                  border: "1.5px solid rgba(200, 172, 75, 0.50)",
-                  marginTop: "2px",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(200, 172, 75, 0.75)";
-                  e.currentTarget.style.backgroundColor =
-                    "rgba(200, 172, 75, 0.06)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(200, 172, 75, 0.35)";
-                  e.currentTarget.style.backgroundColor = "transparent";
-                }}
+                className="editorial-button editorial-button-secondary-dark gap-2 rounded-[10px] px-6 py-[10px] transition-all duration-300"
+                style={{ marginTop: "2px" }}
               >
                 Katso töitämme
                 <span>→</span>
@@ -217,24 +186,24 @@ export default function HeroAndProblem() {
 
             {/* Microcopy */}
             <p
-              className="hero-animate mt-3 max-w-[400px] text-[12px] leading-[1.7] font-light"
-              style={{ color: "rgba(148, 163, 184, 0.60)" }}
+              className="hero-animate mt-3 max-w-[400px] text-[14px] leading-[1.6] font-normal"
+              style={{ color: "var(--text-inverse-secondary)" }}
             >
-              Täytä lyhyt lomake ja saat demon uusista sivuista 3 päivän sisällä.
+              Täyttäkää lyhyt lomake. Rakennamme yrityksellenne henkilökohtaisen demon ja otamme yhteyttä demotapaamisen sopimiseksi.
             </p>
 
             {/* Inline trust row */}
             <div
-              className="hero-animate mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] tracking-wide font-light"
-              style={{ color: "rgba(148, 163, 184, 0.52)" }}
+              className="hero-animate mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[14px] font-normal leading-[1.5]"
+              style={{ color: "var(--text-inverse-secondary)" }}
             >
               <span>
-                <span style={{ color: "rgba(200, 172, 75, 0.55)" }}>★</span> 4.8/5 Google-arvosteluista
+                <span style={{ color: "var(--accent-primary)" }}>★</span> 4.9/5 Google-arvosteluista · 7 arvostelua
               </span>
-              <span style={{ color: "rgba(148, 163, 184, 0.25)" }}>•</span>
+              <span style={{ color: "var(--text-decorative)" }}>•</span>
               <span>Riskitön ensiaskel</span>
-              <span style={{ color: "rgba(148, 163, 184, 0.25)" }}>•</span>
-              <span>Suunniteltu tukemaan yhteydenottoa</span>
+              <span style={{ color: "var(--text-decorative)" }}>•</span>
+              <span>Maksuton. Ilman sitoumuksia.</span>
             </div>
           </div>
 

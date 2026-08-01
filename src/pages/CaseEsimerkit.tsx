@@ -258,7 +258,7 @@ export default function CaseEsimerkit() {
 
   return (
     <div style={{ paddingTop: "var(--nav-height)" }}>
-      <SEO title="Case-esimerkit" description="Tutustu Holva Toimiston aikaisempiin projekteihin — selkeitä ja toimivia verkkosivustoja hyvinvointialalle." canonical="/case-esimerkit" />
+      <SEO title="Case-esimerkit" description="Tutustu Holva Toimiston aikaisempiin projekteihin — selkeitä ja toimivia verkkosivustoja palveluyrityksille." canonical="/case-esimerkit" />
       {/* Header */}
       <section
         className="relative"
@@ -371,7 +371,7 @@ export default function CaseEsimerkit() {
               letterSpacing: "-0.02em",
             }}
           >
-            Näe miltä yrityksesi voisi näyttää modernimmalla verkkokokemuksella
+            Tutustukaa, miltä yrityksenne voisi näyttää modernimmalla verkkokokemuksella
           </h2>
           <p
             className="mt-4 text-[14px] leading-[1.75] font-light"
@@ -381,7 +381,7 @@ export default function CaseEsimerkit() {
               margin: "16px auto 0",
             }}
           >
-            Pyydä maksuton redesign-demo ja näet tarkalleen mitä parannan ja
+            Pyydä maksuton redesign-demo ja tutustu tarkalleen mitä parannan ja
             miten se vaikuttaa kävijöiden käyttäytymiseen.
           </p>
           <button

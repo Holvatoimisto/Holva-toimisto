@@ -37,11 +37,11 @@ export default function Navbar() {
         style={{
           height: "var(--nav-height)",
           backgroundColor: scrolled
-            ? "rgba(13, 6, 48, 0.92)"
-            : "rgba(13, 6, 48, 0.75)",
+            ? "rgba(51, 46, 37, 0.98)"
+            : "var(--background-emphasis)",
           backdropFilter: "blur(20px)",
           borderBottom: scrolled
-            ? "1px solid rgba(255,255,255,0.06)"
+            ? "1px solid rgba(185, 183, 177, 0.24)"
             : "1px solid transparent",
         }}
       >
@@ -61,19 +61,19 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className="relative text-sm font-medium tracking-wide transition-colors duration-200 hover:text-white"
+                className="editorial-focus relative text-[15px] font-medium transition-colors duration-200 hover:text-white"
                 style={{
                   color:
                     location.pathname === link.path
-                      ? "var(--accent-gold)"
-                      : "var(--text-secondary)",
+                      ? "var(--text-inverse)"
+                      : "var(--text-inverse-secondary)",
                 }}
               >
                 {link.label}
                 {location.pathname === link.path && (
                   <span
                     className="absolute -bottom-1 left-0 right-0 h-0.5"
-                    style={{ backgroundColor: "var(--accent-gold)" }}
+                    style={{ backgroundColor: "var(--accent-primary)" }}
                   />
                 )}
               </Link>
@@ -83,25 +83,9 @@ export default function Navbar() {
           {/* Desktop CTA — outline style, matches funnel language */}
           <button
             onClick={openModal}
-            className="hidden md:block text-xs font-medium tracking-wider transition-all duration-300"
+            className="editorial-button editorial-button-secondary-dark hidden rounded-[10px] px-5 py-2.5 transition-all duration-300 md:inline-flex"
             style={{
-              backgroundColor: "transparent",
-              color: "var(--accent-gold)",
-              padding: "7px 15px",
-              borderRadius: "10px",
-              letterSpacing: "0.05em",
-              border: "1.5px solid rgba(200, 172, 75, 0.5)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "rgba(200, 172, 75, 0.1)";
-              e.currentTarget.style.borderColor = "rgba(200, 172, 75, 0.8)";
-              e.currentTarget.style.boxShadow =
-                "0 0 16px rgba(200, 172, 75, 0.15)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.borderColor = "rgba(200, 172, 75, 0.5)";
-              e.currentTarget.style.boxShadow = "none";
+              boxShadow: "none",
             }}
           >
             Pyydä demo
@@ -109,7 +93,7 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden text-white"
+            className="editorial-focus text-white md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -122,24 +106,25 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="absolute inset-0 backdrop-blur-sm"
+            style={{ backgroundColor: "rgba(51, 46, 37, 0.48)" }}
             onClick={() => setMobileOpen(false)}
           />
           <div
             className="absolute right-0 top-0 h-full w-72 p-6 pt-20"
-            style={{ backgroundColor: "var(--bg-secondary)" }}
+            style={{ backgroundColor: "var(--background-emphasis)" }}
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-lg font-medium transition-colors duration-200"
+                  className="editorial-focus text-lg font-medium transition-colors duration-200"
                   style={{
                     color:
                       location.pathname === link.path
-                        ? "var(--accent-gold)"
-                        : "var(--text-secondary)",
+                        ? "var(--text-inverse)"
+                        : "var(--text-inverse-secondary)",
                   }}
                 >
                   {link.label}
@@ -150,14 +135,7 @@ export default function Navbar() {
                   setMobileOpen(false);
                   setTimeout(openModal, 300);
                 }}
-                className="mt-4 w-full text-sm font-medium tracking-wider"
-                style={{
-                  backgroundColor: "var(--accent-gold)",
-                  color: "var(--bg-secondary)",
-                  padding: "14px 22px",
-                  borderRadius: "10px",
-                  letterSpacing: "0.03em",
-                }}
+                className="editorial-button editorial-button-secondary-dark mt-4 w-full rounded-[10px] px-[22px] py-[14px]"
               >
                 Pyydä demo
               </button>

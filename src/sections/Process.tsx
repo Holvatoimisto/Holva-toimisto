@@ -8,22 +8,22 @@ const steps = [
   {
     number: "01",
     heading: "Pyydä demo",
-    text: "Täytät lyhyen lomakkeen, jonka perusteella suunnittelemme yrityksellesi henkilökohtaisen verkkosivudemonstration.",
+    text: "Täytätte lyhyen lomakkeen, jonka perusteella rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta.",
   },
   {
     number: "02",
-    heading: "Saat videodemon",
-    text: "Lähetämme Loom-videon, jossa käymme läpi uuden verkkosivun suunnan ja ideat käytännössä.",
+    heading: "Demo valmistuu",
+    text: "Rakennamme demon perusteella suunnan ja sovimme demotapaamisen ajankohdan kanssanne.",
   },
   {
     number: "03",
     heading: "Käydään suunta yhdessä läpi",
-    text: "Varaamme lyhyen Teams-palaverin, jossa käymme yhdessä läpi tavoitteesi, vastaan kysymyksiisi ja päätämme tuntuuko yhteistyö hyvältä ratkaisulta.",
+    text: "Varaamme lyhyen Teams-palaverin, jossa käymme yhdessä läpi tavoitteenne, vastaamme kysymyksiinne ja päätämme yhdessä, tuntuuko yhteistyö hyvältä ratkaisulta.",
   },
   {
     number: "04",
     heading: "Sivusto viimeistellään ja julkaistaan",
-    text: "Viimeistelemme verkkosivukokonaisuuden, joka näyttää uskottavalta ja toimii sujuvasti kaikilla laitteilla.",
+    text: "Viimeistelemme verkkosivukokonaisuuden, joka välittää palvelun laadun, rakentaa luottamusta ja ohjaa yhteydenottoon kaikilla laitteilla.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function Process() {
       ref={sectionRef}
       className="relative"
       style={{
-        backgroundColor: "#091525",
+        backgroundColor: "var(--background-secondary)",
         padding: "72px 24px",
       }}
     >
@@ -88,15 +88,15 @@ export default function Process() {
         {/* Header */}
         <div className="mx-auto max-w-[520px] text-center">
           <p
-            className="process-header text-[11px] font-normal uppercase tracking-[0.16em]"
-            style={{ color: "rgba(200, 172, 75, 0.65)" }}
+            className="process-header text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+            style={{ color: "var(--text-secondary-editorial)" }}
           >
             Yksinkertainen prosessi
           </p>
           <h2
             className="process-header mt-2.5 text-[1.8rem] leading-[1.05] sm:text-[2.2rem] lg:text-[2.4rem]"
             style={{
-              color: "var(--text-primary)",
+              color: "var(--text-primary-editorial)",
               fontFamily: "'Instrument Serif', serif",
               letterSpacing: "-0.02em",
             }}
@@ -104,8 +104,8 @@ export default function Process() {
 Yksinkertainen prosessi. Harkittu lopputulos.
           </h2>
           <p
-            className="process-header mt-2.5 text-[14px] leading-[1.6] font-light"
-            style={{ color: "var(--text-secondary)" }}
+            className="process-header mt-2.5 text-[17px] leading-[1.65] font-normal lg:text-[18px]"
+            style={{ color: "var(--text-secondary-editorial)" }}
           >
             Huolehdimme koko projektista alusta loppuun, jotta voit keskittyä omaan työhösi.
           </p>
@@ -120,44 +120,44 @@ Yksinkertainen prosessi. Harkittu lopputulos.
               style={{
                 height: "1px",
                 background:
-                  "linear-gradient(90deg, transparent 0%, rgba(200, 172, 75, 0.12) 50%, transparent 100%)",
+                  "linear-gradient(90deg, transparent 0%, rgba(163, 122, 70, 0.22) 50%, transparent 100%)",
               }}
             />
 
             {/* Steps 1–2 */}
             <div className="grid grid-cols-4 gap-0">
               {steps.slice(0, 2).map((step, i) => (
-                <div key={i} className="process-step relative px-5">
+                <div key={i} className="process-step relative px-5 py-5" style={{ backgroundColor: "var(--surface-primary)" }}>
                   {i > 0 && (
                     <div
                       className="absolute left-0 top-0 bottom-0 w-px"
                       style={{
                         background:
-                          "linear-gradient(180deg, transparent 10%, rgba(255, 255, 255, 0.06) 50%, transparent 90%)",
+                          "linear-gradient(180deg, transparent 10%, var(--divider) 50%, transparent 90%)",
                       }}
                     />
                   )}
                   <span
-                    className="text-[11px] font-normal tracking-[0.12em]"
+                    className="text-[12px] font-semibold leading-[1.4] tracking-[0.08em]"
                     style={{
-                      color: "rgba(200, 172, 75, 0.65)",
+                      color: "var(--text-secondary-editorial)",
                       fontVariantNumeric: "tabular-nums",
                     }}
                   >
                     {step.number}
                   </span>
                   <h3
-                    className="mt-3 text-[16px] font-normal leading-[1.3]"
+                    className="mt-3 text-[18px] font-semibold leading-[1.35]"
                     style={{
-                      color: "var(--text-primary)",
+                      color: "var(--text-primary-editorial)",
                       letterSpacing: "-0.01em",
                     }}
                   >
                     {step.heading}
                   </h3>
                   <p
-                    className="mt-2 text-[12px] leading-[1.65] font-light"
-                    style={{ color: "rgba(148, 163, 184, 0.5)" }}
+                    className="mt-2 text-[16px] leading-[1.65] font-normal"
+                    style={{ color: "var(--text-secondary-editorial)" }}
                   >
                     {step.text}
                   </p>
@@ -170,8 +170,8 @@ Yksinkertainen prosessi. Harkittu lopputulos.
             {/* Transition line — soft, centered, implies choice */}
             <div className="py-7 text-center">
               <p
-                className="text-[12px] font-light italic"
-                style={{ color: "rgba(148, 163, 184, 0.32)" }}
+                className="text-[14px] font-normal italic leading-[1.6]"
+                style={{ color: "var(--text-secondary-editorial)" }}
               >
                 Demo ei sido mihinkään — jatkamme yhdessä vain jos kokonaisuus tuntuu oikealta.
               </p>
@@ -182,37 +182,37 @@ Yksinkertainen prosessi. Harkittu lopputulos.
               {/* Spacer columns for steps 1–2 */}
               <div className="col-span-2" />
               {steps.slice(2, 4).map((step, i) => (
-                <div key={i + 2} className="process-step relative px-5">
+                <div key={i + 2} className="process-step relative px-5 py-5" style={{ backgroundColor: "var(--surface-primary)" }}>
                   {i > 0 && (
                     <div
                       className="absolute left-0 top-0 bottom-0 w-px"
                       style={{
                         background:
-                          "linear-gradient(180deg, transparent 10%, rgba(255, 255, 255, 0.06) 50%, transparent 90%)",
+                          "linear-gradient(180deg, transparent 10%, var(--divider) 50%, transparent 90%)",
                       }}
                     />
                   )}
                   <span
-                    className="text-[11px] font-normal tracking-[0.12em]"
+                    className="text-[12px] font-semibold leading-[1.4] tracking-[0.08em]"
                     style={{
-                      color: "rgba(200, 172, 75, 0.65)",
+                      color: "var(--text-secondary-editorial)",
                       fontVariantNumeric: "tabular-nums",
                     }}
                   >
                     {step.number}
                   </span>
                   <h3
-                    className="mt-3 text-[16px] font-normal leading-[1.3]"
+                    className="mt-3 text-[18px] font-semibold leading-[1.35]"
                     style={{
-                      color: "var(--text-primary)",
+                      color: "var(--text-primary-editorial)",
                       letterSpacing: "-0.01em",
                     }}
                   >
                     {step.heading}
                   </h3>
                   <p
-                    className="mt-2 text-[12px] leading-[1.65] font-light"
-                    style={{ color: "rgba(148, 163, 184, 0.5)" }}
+                    className="mt-2 text-[16px] leading-[1.65] font-normal"
+                    style={{ color: "var(--text-secondary-editorial)" }}
                   >
                     {step.text}
                   </p>
@@ -226,34 +226,34 @@ Yksinkertainen prosessi. Harkittu lopputulos.
             {steps.map((step, i) => (
               <div key={i}>
                 <div
-                  className="process-step"
+                  className="process-step px-5 py-5"
                   style={{
-                    borderTop: i > 0 ? "1px solid rgba(255, 255, 255, 0.05)" : "none",
-                    paddingTop: i > 0 ? "20px" : "0",
+                    backgroundColor: "var(--surface-primary)",
+                    borderTop: i > 0 ? "1px solid var(--divider)" : "none",
                     marginTop: i > 0 ? "20px" : "0",
                   }}
                 >
                   <span
-                    className="text-[11px] font-normal tracking-[0.12em]"
+                    className="text-[12px] font-semibold leading-[1.4] tracking-[0.08em]"
                     style={{
-                      color: "rgba(200, 172, 75, 0.65)",
+                      color: "var(--text-secondary-editorial)",
                       fontVariantNumeric: "tabular-nums",
                     }}
                   >
                     {step.number}
                   </span>
                   <h3
-                    className="mt-2 text-[16px] font-normal leading-[1.3]"
+                    className="mt-2 text-[18px] font-semibold leading-[1.35]"
                     style={{
-                      color: "var(--text-primary)",
+                      color: "var(--text-primary-editorial)",
                       letterSpacing: "-0.01em",
                     }}
                   >
                     {step.heading}
                   </h3>
                   <p
-                    className="mt-1.5 text-[13px] leading-[1.65] font-light"
-                    style={{ color: "rgba(148, 163, 184, 0.45)" }}
+                    className="mt-1.5 text-[16px] leading-[1.65] font-normal"
+                    style={{ color: "var(--text-secondary-editorial)" }}
                   >
                     {step.text}
                   </p>
@@ -262,8 +262,8 @@ Yksinkertainen prosessi. Harkittu lopputulos.
                 {i === 1 && (
                   <div className="py-6 text-center">
                     <p
-                      className="text-[12px] font-light italic"
-                      style={{ color: "rgba(148, 163, 184, 0.30)" }}
+                      className="text-[14px] font-normal italic leading-[1.6]"
+                      style={{ color: "var(--text-secondary-editorial)" }}
                     >
                       Demo ei sido mihinkään — jatkamme yhdessä vain jos kokonaisuus tuntuu oikealta.
                     </p>

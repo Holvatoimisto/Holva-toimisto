@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const googleReviewsUrl =
+  "https://www.google.com/search?sa=X&sca_esv=e755c4fcff4cb9a6&sxsrf=APpeQnsIscl4irLxtFWp6_UL634lRFLbNA:1785529145305&q=Holva+Toimisto+Arvostelut&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NTY0Nrc0MTYxNzAzswQCE8MNjIyvGCU98nPKEhVC8jNzM4tL8hUci8ryi0tSc0pLFrHilgMArkAS91IAAAA&rldimm=5313794347066999941&tbm=lcl&hl=fi-FI&ved=2ahUKEwiJmcSz3v2VAxWzFBAIHdLPKUMQ9fQKegQIRhAG&biw=1422&bih=612&dpr=1.35#lkt=LocalPoiReviews";
+
 const reviews = [
   {
     name: "Sini Oksanen",
@@ -48,13 +51,13 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section ref={sectionRef} style={{ backgroundColor: "#091525" }}>
+    <section ref={sectionRef} style={{ backgroundColor: "var(--background-secondary)" }}>
       {/* Fade from hero */}
       <div
         style={{
           height: "80px",
           background:
-            "linear-gradient(180deg, rgba(9,21,37,0) 0%, #091525 100%)",
+            "linear-gradient(180deg, var(--background-emphasis) 0%, var(--background-secondary) 100%)",
           pointerEvents: "none",
         }}
       />
@@ -68,16 +71,16 @@ export default function Testimonials() {
                 <Star
                   key={i}
                   size={10}
-                  fill="rgba(200,172,75,0.65)"
-                  color="rgba(200,172,75,0.65)"
+                  fill="var(--accent-primary)"
+                  color="var(--accent-primary)"
                 />
               ))}
             </div>
             <span
-              className="text-[12px] font-normal"
-              style={{ color: "rgba(226,232,240,0.50)" }}
+              className="text-[14px] font-medium leading-[1.4]"
+              style={{ color: "var(--text-secondary-editorial)" }}
             >
-              4.8/5 Google-arvosteluista
+              4.9/5 Google-arvosteluista · 7 arvostelua
             </span>
           </div>
 
@@ -85,9 +88,9 @@ export default function Testimonials() {
           <p
             className="t-anim mx-auto mt-6 text-center"
             style={{
-              color: "rgba(148,163,184,0.55)",
+              color: "var(--text-primary-editorial)",
               fontFamily: "'Instrument Serif', serif",
-              fontSize: "clamp(1.1rem, 1.8vw, 1.3rem)",
+              fontSize: "clamp(1.125rem, 1.8vw, 1.25rem)",
               letterSpacing: "-0.01em",
             }}
           >
@@ -101,16 +104,16 @@ export default function Testimonials() {
                 key={i}
                 className="rounded-[10px] px-5 py-5 transition-all duration-300"
                 style={{
-                  background: "rgba(255,255,255,0.010)",
-                  border: "1px solid rgba(255,255,255,0.035)",
+                  background: "var(--surface-primary)",
+                  border: "1px solid var(--border-subtle)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)";
-                  e.currentTarget.style.background = "rgba(255,255,255,0.018)";
+                  e.currentTarget.style.borderColor = "var(--border-strong)";
+                  e.currentTarget.style.background = "var(--surface-primary)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.035)";
-                  e.currentTarget.style.background = "rgba(255,255,255,0.010)";
+                  e.currentTarget.style.borderColor = "var(--border-subtle)";
+                  e.currentTarget.style.background = "var(--surface-primary)";
                 }}
               >
                 <div className="flex items-center gap-[2px]">
@@ -118,20 +121,20 @@ export default function Testimonials() {
                     <Star
                       key={j}
                       size={9}
-                      fill="rgba(200,172,75,0.50)"
-                      color="rgba(200,172,75,0.50)"
+                      fill="var(--accent-primary)"
+                      color="var(--accent-primary)"
                     />
                   ))}
                 </div>
                 <p
-                  className="mt-3 text-[14px] leading-[1.6] font-light"
-                  style={{ color: "rgba(226,232,240,0.68)" }}
+                  className="mt-3 text-[16px] leading-[1.65] font-normal"
+                  style={{ color: "var(--text-primary-editorial)" }}
                 >
                   {r.text}
                 </p>
                 <p
-                  className="mt-3 text-[11px] font-normal"
-                  style={{ color: "rgba(148,163,184,0.35)" }}
+                  className="mt-3 text-[14px] font-medium leading-[1.4]"
+                  style={{ color: "var(--text-secondary-editorial)" }}
                 >
                   {r.name}
                 </p>
@@ -142,17 +145,11 @@ export default function Testimonials() {
           {/* ── Soft CTA ── */}
           <div className="t-anim mt-8 text-center">
             <a
-              href="https://www.google.com/search?q=Holva+Toimisto+arvostelut&tbm=lcl"
+              href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-[12px] font-light tracking-wide transition-colors duration-300"
-              style={{ color: "rgba(200,172,75,0.45)" }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "rgba(200,172,75,0.75)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "rgba(200,172,75,0.45)";
-              }}
+              className="editorial-focus inline-block text-[15px] font-medium leading-[1.5] underline decoration-[var(--border-strong)] underline-offset-4 transition-colors duration-300 hover:text-[var(--text-secondary-editorial)]"
+              style={{ color: "var(--text-primary-editorial)" }}
             >
               Katso kaikki arvostelut &rarr;
             </a>

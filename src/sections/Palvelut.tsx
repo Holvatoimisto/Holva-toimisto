@@ -72,29 +72,29 @@ export default function Palvelut() {
   useAnim(s5, ".p5-anim");
 
   return (
-    <div className="relative" style={{ backgroundColor: "#091525" }}>
+    <div className="relative" style={{ backgroundColor: "var(--background-primary)" }}>
 
       {/* ── SECTION 2: Core Offer (split) ─────────────── */}
       <section ref={s2} className="relative" style={{ padding: "80px 24px 100px" }}>
         <div className="absolute top-0 left-0 right-0 h-px" style={{
-          background: "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.06) 50%, transparent 100%)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(163,122,70,0.18) 50%, transparent 100%)",
         }} />
 
         <div className="mx-auto grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16" style={{ maxWidth: "1000px" }}>
           {/* Left: Copy */}
           <div className="lg:col-span-5">
-            <p className="p2-anim text-[11px] font-normal uppercase tracking-[0.16em]" style={{ color: "rgba(200,172,75,0.55)" }}>
-              Premium verkkosivustot hyvinvointibrändeille
+            <p className="p2-anim text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]" style={{ color: "var(--text-secondary-editorial)" }}>
+              Premium-verkkosivustot palveluyrityksille
             </p>
             <h2 className="p2-anim mt-3 text-[1.6rem] leading-[1.12] sm:text-[1.9rem] lg:text-[2.1rem]"
-              style={{ color: "var(--text-primary)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em", maxWidth: "380px" }}>
+              style={{ color: "var(--text-primary-editorial)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em", maxWidth: "380px" }}>
               Hyvät verkkosivut eivät vain näytä hyviltä. Ne ohjaavat asiakkaita eteenpäin.
             </h2>
             <div className="p2-anim mt-4 flex flex-col gap-3" style={{ maxWidth: "380px" }}>
-              <p className="text-[13px] leading-[1.7] font-light" style={{ color: "var(--text-secondary)", maxWidth: "420px" }}>
+              <p className="text-[16px] leading-[1.65] font-normal lg:text-[17px]" style={{ color: "var(--text-secondary-editorial)", maxWidth: "60ch" }}>
                 Asiakkaan pitäisi ymmärtää muutamassa sekunnissa, miksi juuri teihin kannattaa ottaa yhteyttä.
               </p>
-              <p className="text-[13px] leading-[1.7] font-light" style={{ color: "rgba(148,163,184,0.55)" }}>
+              <p className="text-[16px] leading-[1.65] font-normal" style={{ color: "var(--text-secondary-editorial)" }}>
                 Rakennamme sivustot niin, että tärkeimmät asiat eivät huku designin alle ja yhteydenotto tuntuu helpolta ilman ylimääräistä etsimistä.
               </p>
             </div>
@@ -104,10 +104,10 @@ export default function Palvelut() {
               <div style={{
                 width: "20px",
                 height: "1px",
-                background: "rgba(200,172,75,0.15)",
+                background: "rgba(163,122,70,0.22)",
                 marginBottom: "14px",
               }} />
-              <p className="text-[12px] leading-[1.7] font-light" style={{ color: "rgba(148,163,184,0.45)" }}>
+              <p className="text-[15px] leading-[1.6] font-normal" style={{ color: "var(--text-secondary-editorial)" }}>
                 Kun tärkeimmät asiat ovat heti selkeitä, asiakkaan on helpompi luottaa ja ottaa seuraava askel.
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function Palvelut() {
           {/* Right: Core + Extended feature cards */}
           <div className="lg:col-span-7" style={{ maxWidth: "480px" }}>
             {/* ── YDINPALVELUT ── */}
-            <p className="p2-anim mb-4 text-[10px] font-normal uppercase tracking-[0.16em]" style={{ color: "rgba(200,172,75,0.45)" }}>
+            <p className="p2-anim mb-4 text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em]" style={{ color: "var(--text-secondary-editorial)" }}>
               Mitä Holvan tekemät sivut sisältävät
             </p>
             <div className="flex flex-col gap-2.5">
@@ -127,35 +127,35 @@ export default function Palvelut() {
                     key={i}
                     className="p2-anim group flex items-start gap-3.5 rounded-[10px] px-3.5 py-3.5 transition-all duration-300"
                     style={{
-                      background: "rgba(255,255,255,0.015)",
-                      border: "1px solid rgba(255,255,255,0.04)",
+                      background: "var(--surface-secondary)",
+                      border: "1px solid var(--border-subtle)",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "rgba(255,255,255,0.028)";
-                      e.currentTarget.style.borderColor = "rgba(200,172,75,0.10)";
+                      e.currentTarget.style.background = "var(--surface-primary)";
+                      e.currentTarget.style.borderColor = "var(--border-strong)";
                       e.currentTarget.style.transform = "translateY(-1px)";
                       const icon = e.currentTarget.querySelector(".feat-icon") as HTMLElement;
-                      if (icon) icon.style.color = "rgba(200,172,75,0.75)";
+                      if (icon) icon.style.color = "var(--accent-primary)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "rgba(255,255,255,0.015)";
-                      e.currentTarget.style.borderColor = "rgba(255,255,255,0.04)";
+                      e.currentTarget.style.background = "var(--surface-secondary)";
+                      e.currentTarget.style.borderColor = "var(--border-subtle)";
                       e.currentTarget.style.transform = "translateY(0)";
                       const icon = e.currentTarget.querySelector(".feat-icon") as HTMLElement;
-                      if (icon) icon.style.color = "rgba(148,163,184,0.35)";
+                      if (icon) icon.style.color = "var(--text-decorative)";
                     }}
                   >
                     <span
                       className="feat-icon mt-0.5 flex-shrink-0 transition-colors duration-300"
-                      style={{ color: "rgba(148,163,184,0.35)" }}
+                      style={{ color: "var(--text-decorative)" }}
                     >
                       <Icon size={16} />
                     </span>
                     <div>
-                      <p className="text-[13px] font-normal" style={{ color: "rgba(226,232,240,0.75)" }}>
+                      <p className="text-[18px] font-semibold leading-[1.35]" style={{ color: "var(--text-primary-editorial)" }}>
                         {it.label}
                       </p>
-                      <p className="mt-0.5 text-[12px] leading-[1.55] font-light" style={{ color: "rgba(148,163,184,0.50)" }}>
+                      <p className="mt-1 text-[15px] leading-[1.6] font-normal" style={{ color: "var(--text-secondary-editorial)" }}>
                         {it.text}
                       </p>
                     </div>
@@ -168,12 +168,12 @@ export default function Palvelut() {
             <div className="p2-anim my-8">
               <div style={{
                 height: "1px",
-                background: "linear-gradient(90deg, rgba(200,172,75,0.08) 0%, transparent 70%)",
+                background: "linear-gradient(90deg, rgba(163,122,70,0.16) 0%, transparent 70%)",
               }} />
             </div>
 
             {/* ── JATKUVA KEHITYS ── */}
-            <p className="p2-anim mb-4 text-[10px] font-normal uppercase tracking-[0.16em]" style={{ color: "rgba(200,172,75,0.40)" }}>
+            <p className="p2-anim mb-4 text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em]" style={{ color: "var(--text-secondary-editorial)" }}>
               Mahdollisuus myös jatkuvaan kehitykseen
             </p>
             <div className="flex flex-col gap-2.5">
@@ -184,35 +184,35 @@ export default function Palvelut() {
                     key={i}
                     className="p2-anim group flex items-start gap-3.5 rounded-[10px] px-3.5 py-3.5 transition-all duration-300"
                     style={{
-                      background: "rgba(255,255,255,0.010)",
-                      border: "1px solid rgba(255,255,255,0.03)",
+                      background: "var(--surface-secondary)",
+                      border: "1px solid var(--border-subtle)",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "rgba(255,255,255,0.022)";
-                      e.currentTarget.style.borderColor = "rgba(200,172,75,0.08)";
+                      e.currentTarget.style.background = "var(--surface-primary)";
+                      e.currentTarget.style.borderColor = "var(--border-strong)";
                       e.currentTarget.style.transform = "translateY(-1px)";
                       const icon = e.currentTarget.querySelector(".feat-icon") as HTMLElement;
-                      if (icon) icon.style.color = "rgba(200,172,75,0.65)";
+                      if (icon) icon.style.color = "var(--accent-primary)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "rgba(255,255,255,0.010)";
-                      e.currentTarget.style.borderColor = "rgba(255,255,255,0.03)";
+                      e.currentTarget.style.background = "var(--surface-secondary)";
+                      e.currentTarget.style.borderColor = "var(--border-subtle)";
                       e.currentTarget.style.transform = "translateY(0)";
                       const icon = e.currentTarget.querySelector(".feat-icon") as HTMLElement;
-                      if (icon) icon.style.color = "rgba(148,163,184,0.30)";
+                      if (icon) icon.style.color = "var(--text-decorative)";
                     }}
                   >
                     <span
                       className="feat-icon mt-0.5 flex-shrink-0 transition-colors duration-300"
-                      style={{ color: "rgba(148,163,184,0.30)" }}
+                      style={{ color: "var(--text-decorative)" }}
                     >
                       <Icon size={16} />
                     </span>
                     <div>
-                      <p className="text-[13px] font-normal" style={{ color: "rgba(226,232,240,0.65)" }}>
+                      <p className="text-[18px] font-semibold leading-[1.35]" style={{ color: "var(--text-primary-editorial)" }}>
                         {it.label}
                       </p>
-                      <p className="mt-0.5 text-[12px] leading-[1.55] font-light" style={{ color: "rgba(148,163,184,0.45)" }}>
+                      <p className="mt-1 text-[15px] leading-[1.6] font-normal" style={{ color: "var(--text-secondary-editorial)" }}>
                         {it.text}
                       </p>
                     </div>
@@ -227,12 +227,12 @@ export default function Palvelut() {
 {/* [Hidden] ── SECTION 1: Strategic Intro (Lähestymistapa) ─
       <section ref={s1} className="relative" style={{ padding: "120px 24px 100px" }}>
         <div className="absolute top-0 left-0 right-0 h-px" style={{
-          background: "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.10) 50%, transparent 100%)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(163,122,70,0.20) 50%, transparent 100%)",
         }} />
 
         <div className="mx-auto" style={{ maxWidth: "800px" }}>
           <div className="p1-anim" style={{ paddingLeft: "6%" }}>
-            <p className="text-[11px] font-normal uppercase tracking-[0.2em]" style={{ color: "rgba(200,172,75,0.50)" }}>
+            <p className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]" style={{ color: "var(--text-secondary-editorial)" }}>
               Lähestymistapa
             </p>
           </div>
@@ -240,14 +240,14 @@ export default function Palvelut() {
           <div className="p1-anim" style={{
             width: "28px",
             height: "1px",
-            background: "rgba(200,172,75,0.18)",
+            background: "rgba(163,122,70,0.24)",
             marginLeft: "6%",
             marginTop: "10px",
           }} />
 
           <div className="p1-anim mx-auto mt-8 text-center" style={{ maxWidth: "460px" }}>
             <p style={{
-              color: "rgba(226, 232, 240, 0.50)",
+              color: "var(--text-secondary-editorial)",
               fontFamily: "'Instrument Serif', serif",
               fontSize: "clamp(1.4rem, 2.4vw, 1.8rem)",
               lineHeight: 1.3,
@@ -259,7 +259,7 @@ export default function Palvelut() {
             <div style={{ height: "24px" }} />
 
             <p style={{
-              color: "var(--text-primary)",
+              color: "var(--text-primary-editorial)",
               fontFamily: "'Instrument Serif', serif",
               fontSize: "clamp(1.8rem, 3.6vw, 2.5rem)",
               lineHeight: 1.18,
@@ -269,8 +269,8 @@ export default function Palvelut() {
             </p>
           </div>
 
-          <p className="p1-anim mx-auto mt-10 text-center text-[14px] leading-[1.85] font-normal"
-            style={{ color: "rgba(226,232,240,0.65)", maxWidth: "400px" }}>
+          <p className="p1-anim mx-auto mt-10 text-center text-[17px] leading-[1.65] font-normal"
+            style={{ color: "var(--text-secondary-editorial)", maxWidth: "60ch" }}>
             Monet yritykset investoivat jatkuvasti mainontaan ja näkyvyyteen, vaikka verkkosivusto menettää asiakkaita jo ennen ensimmäistä yhteydenottoa.
           </p>
         </div>
@@ -280,18 +280,18 @@ export default function Palvelut() {
 {/* [Hidden] ── SECTION 4: Ecosystem ────────────────────────
       <section ref={s4} className="relative" style={{ padding: "80px 24px 100px" }}>
         <div className="absolute top-0 left-0 right-0 h-px" style={{
-          background: "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.06) 50%, transparent 100%)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(163,122,70,0.18) 50%, transparent 100%)",
         }} />
 
         <div className="mx-auto text-center" style={{ maxWidth: "560px" }}>
-          <p className="p4-anim text-[11px] font-normal uppercase tracking-[0.16em]" style={{ color: "rgba(200,172,75,0.55)" }}>
+          <p className="p4-anim text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]" style={{ color: "var(--text-secondary-editorial)" }}>
             Pitkäjänteinen kehitys
           </p>
           <h2 className="p4-anim mt-3 text-[1.6rem] leading-[1.08] sm:text-[1.9rem] lg:text-[2.1rem]"
-            style={{ color: "var(--text-primary)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em" }}>
+            style={{ color: "var(--text-primary-editorial)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em" }}>
             Verkkosivusto ei jää vain valmiiksi projektiksi.
           </h2>
-          <p className="p4-anim mt-4 text-[14px] leading-[1.7] font-light" style={{ color: "var(--text-secondary)" }}>
+          <p className="p4-anim mt-4 text-[17px] leading-[1.65] font-normal lg:text-[18px]" style={{ color: "var(--text-secondary-editorial)" }}>
             Tarvittaessa autamme myös ylläpidossa, sisällön päivityksissä, analytiikassa sekä automaatioissa, jotta verkkonäkyvyys voi kehittyä yrityksesi mukana pitkällä aikavälillä.
           </p>
         </div>
@@ -301,30 +301,24 @@ export default function Palvelut() {
 {/* [Hidden] ── SECTION 5: CTA ─────────────────────────
       <section ref={s5} className="relative" style={{ padding: "80px 24px 100px" }}>
         <div className="absolute top-0 left-0 right-0 h-px" style={{
-          background: "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.10) 50%, transparent 100%)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(163,122,70,0.20) 50%, transparent 100%)",
         }} />
 
         <div className="mx-auto text-center" style={{ maxWidth: "560px" }}>
           <h2 className="p5-anim text-[1.8rem] leading-[1.05] sm:text-[2.1rem] lg:text-[2.4rem]"
-            style={{ color: "var(--text-primary)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em" }}>
-            Pyydä henkilökohtainen Loom-demo
+            style={{ color: "var(--text-primary-editorial)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em" }}>
+            Pyydä henkilökohtainen demo
           </h2>
-          <p className="p5-anim mt-4 text-[14px] leading-[1.7] font-light" style={{ color: "var(--text-secondary)" }}>
+          <p className="p5-anim mt-4 text-[17px] leading-[1.65] font-normal lg:text-[18px]" style={{ color: "var(--text-secondary-editorial)" }}>
             Täytä lyhyt lomake, niin suunnittelemme yrityksellesi henkilökohtaisen demonstraation siitä, miltä verkkonäkyvyytesi voisi parhaimmillaan näyttää ja tuntua.
           </p>
           <div className="p5-anim mt-8 flex flex-wrap items-center justify-center gap-4">
             <button onClick={openModal}
-              className="rounded-[10px] px-9 py-[11px] text-[13px] font-normal tracking-wide transition-all duration-300"
-              style={{ backgroundColor: "var(--accent-gold)", color: "var(--bg-secondary)", letterSpacing: "0.02em", boxShadow: "0 4px 20px rgba(200,172,75,0.18)" }}
-              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#D4B85A"; e.currentTarget.style.boxShadow = "0 8px 28px rgba(200,172,75,0.35)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "var(--accent-gold)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(200,172,75,0.18)"; e.currentTarget.style.transform = "translateY(0)"; }}>
+              className="editorial-button editorial-button-primary rounded-[10px] px-9 py-[11px] transition-all duration-300">
               Pyydä demo
             </button>
             <Link to="/case-esimerkit"
-              className="inline-flex items-center gap-2 rounded-[10px] px-6 py-[10px] text-[13px] font-normal tracking-wide transition-all duration-300"
-              style={{ color: "var(--accent-gold)", letterSpacing: "0.02em", border: "1.5px solid rgba(200,172,75,0.35)" }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(200,172,75,0.65)"; e.currentTarget.style.backgroundColor = "rgba(200,172,75,0.06)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(200,172,75,0.35)"; e.currentTarget.style.backgroundColor = "transparent"; }}>
+              className="editorial-button editorial-button-secondary-light gap-2 rounded-[10px] px-6 py-[10px] transition-all duration-300">
               Katso case-esimerkit
               <ArrowRight size={14} />
             </Link>

@@ -42,18 +42,18 @@ function CaseCard({ c }: { c: (typeof cases)[0] }) {
         style={{
           borderRadius: "14px",
           boxShadow:
-            "0 4px 20px rgba(0, 0, 0, 0.20), 0 0 0 1px rgba(255, 255, 255, 0.03)",
+            "0 4px 20px rgba(51, 46, 37, 0.16), 0 0 0 1px rgba(185, 183, 177, 0.40)",
           transition: "box-shadow 0.4s ease, transform 0.4s ease",
         }}
         onClick={() => setShowAfter((prev) => !prev)}
         onMouseEnter={(e) => {
           e.currentTarget.style.boxShadow =
-            "0 12px 40px rgba(0, 0, 0, 0.30), 0 0 0 1px rgba(200, 172, 75, 0.10)";
+            "0 12px 40px rgba(51, 46, 37, 0.22), 0 0 0 1px rgba(163, 122, 70, 0.24)";
           e.currentTarget.style.transform = "translateY(-3px)";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.boxShadow =
-            "0 4px 20px rgba(0, 0, 0, 0.20), 0 0 0 1px rgba(255, 255, 255, 0.03)";
+            "0 4px 20px rgba(51, 46, 37, 0.16), 0 0 0 1px rgba(185, 183, 177, 0.40)";
           e.currentTarget.style.transform = "translateY(0)";
         }}
       >
@@ -81,7 +81,7 @@ function CaseCard({ c }: { c: (typeof cases)[0] }) {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, transparent 65%, rgba(9, 21, 37, 0.35) 100%)",
+                "linear-gradient(180deg, transparent 65%, rgba(51, 46, 37, 0.38) 100%)",
             }}
           />
 
@@ -93,7 +93,7 @@ function CaseCard({ c }: { c: (typeof cases)[0] }) {
               height: "48px",
               borderRadius: "8px",
               border: "1.5px solid rgba(255, 255, 255, 0.15)",
-              boxShadow: "0 3px 12px rgba(0, 0, 0, 0.45)",
+              boxShadow: "0 3px 12px rgba(51, 46, 37, 0.45)",
               transition: "transform 0.3s ease",
             }}
           >
@@ -111,8 +111,8 @@ function CaseCard({ c }: { c: (typeof cases)[0] }) {
               className="absolute inset-0"
               style={{
                 background: showAfter
-                  ? "rgba(9,21,37,0.40)"
-                  : "rgba(9,21,37,0.20)",
+                  ? "rgba(51,46,37,0.40)"
+                  : "rgba(51,46,37,0.20)",
               }}
             />
           </div>
@@ -121,26 +121,26 @@ function CaseCard({ c }: { c: (typeof cases)[0] }) {
         {/* Card footer — BEFORE: grey, AFTER: gold accent */}
         <div
           className="flex items-center justify-between px-4 py-3"
-          style={{ backgroundColor: "rgba(13, 31, 53, 0.95)" }}
+          style={{ backgroundColor: "var(--surface-primary)" }}
         >
           <p
-            className="text-[13px] font-normal tracking-wide"
-            style={{ color: "rgba(255, 255, 255, 0.55)" }}
+            className="text-[15px] font-medium leading-[1.4]"
+            style={{ color: "var(--text-primary-editorial)" }}
           >
             {c.title}
           </p>
           <span
-            className="text-[10px] font-normal uppercase tracking-[0.12em]"
+            className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.08em]"
             style={{
               color: showAfter
-                ? "rgba(200,172,75,0.85)"
-                : "rgba(148,163,184,0.45)",
+                ? "var(--text-primary-editorial)"
+                : "var(--text-secondary-editorial)",
               border: showAfter
-                ? "1px solid rgba(200,172,75,0.35)"
-                : "1px solid rgba(255,255,255,0.08)",
+                ? "1px solid var(--accent-primary)"
+                : "1px solid var(--border-strong)",
               backgroundColor: showAfter
-                ? "rgba(200,172,75,0.08)"
-                : "transparent",
+                ? "var(--surface-secondary)"
+                : "var(--surface-primary)",
               borderRadius: "5px",
               padding: "2px 8px",
               transition: "all 0.3s ease",
@@ -154,9 +154,9 @@ function CaseCard({ c }: { c: (typeof cases)[0] }) {
       {/* Single insight line — matches active image, no labels */}
       <div className="mt-3 px-1">
         <p
-          className="text-[12px] leading-[1.6] font-light"
+          className="text-[16px] leading-[1.65] font-normal"
           style={{
-            color: showAfter ? "rgba(226,232,240,0.58)" : "rgba(148,163,184,0.48)",
+            color: showAfter ? "var(--text-primary-editorial)" : "var(--text-secondary-editorial)",
             transition: "color 0.35s ease",
           }}
         >
@@ -201,7 +201,7 @@ export default function HomeCaseStudies() {
       ref={sectionRef}
       className="relative"
       style={{
-        backgroundColor: "#0d1f35",
+        backgroundColor: "var(--background-secondary)",
         padding: "80px 24px",
       }}
     >
@@ -209,7 +209,7 @@ export default function HomeCaseStudies() {
       <div
         className="absolute top-0 left-0 right-0 h-24"
         style={{
-          background: "linear-gradient(180deg, #091525 0%, #0d1f35 100%)",
+          background: "linear-gradient(180deg, var(--background-primary) 0%, var(--background-secondary) 100%)",
         }}
       />
 
@@ -217,15 +217,15 @@ export default function HomeCaseStudies() {
         {/* Header */}
         <div className="mx-auto max-w-[640px] text-center">
           <p
-            className="proof-animate text-[11px] font-normal uppercase tracking-[0.16em]"
-            style={{ color: "rgba(200, 172, 75, 0.50)" }}
+            className="proof-animate text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+            style={{ color: "var(--text-secondary-editorial)" }}
           >
             Valittuja projekteja
           </p>
           <h2
             className="proof-animate mt-3 text-[1.7rem] leading-[1.1] sm:text-[2.1rem] lg:text-[2.4rem]"
             style={{
-              color: "var(--text-primary)",
+              color: "var(--text-primary-editorial)",
               fontFamily: "'Instrument Serif', serif",
               letterSpacing: "-0.02em",
             }}
@@ -245,46 +245,14 @@ export default function HomeCaseStudies() {
         <div className="proof-animate mt-10 flex flex-wrap items-center justify-center gap-4">
           <button
             onClick={openModal}
-            className="rounded-[10px] px-9 py-[11px] text-[13px] font-normal tracking-wide transition-all duration-300"
-            style={{
-              backgroundColor: "var(--accent-gold)",
-              color: "var(--bg-secondary)",
-              letterSpacing: "0.02em",
-              boxShadow: "0 4px 20px rgba(200, 172, 75, 0.18)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#D4B85A";
-              e.currentTarget.style.boxShadow =
-                "0 8px 28px rgba(200, 172, 75, 0.35)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "var(--accent-gold)";
-              e.currentTarget.style.boxShadow =
-                "0 4px 20px rgba(200, 172, 75, 0.18)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
+            className="editorial-button editorial-button-primary rounded-[10px] px-9 py-[11px] transition-all duration-300"
           >
             Katso miltä sivunne voisivat näyttää
           </button>
 
           <Link
             to="/case-esimerkit"
-            className="inline-flex items-center gap-2 rounded-[10px] px-6 py-[10px] text-[13px] font-normal tracking-wide transition-all duration-300"
-            style={{
-              color: "var(--accent-gold)",
-              letterSpacing: "0.02em",
-              border: "1.5px solid rgba(200, 172, 75, 0.35)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "rgba(200, 172, 75, 0.65)";
-              e.currentTarget.style.backgroundColor =
-                "rgba(200, 172, 75, 0.06)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "rgba(200, 172, 75, 0.35)";
-              e.currentTarget.style.backgroundColor = "transparent";
-            }}
+            className="editorial-button editorial-button-secondary-light gap-2 rounded-[10px] px-6 py-[10px] transition-all duration-300"
           >
             Tutustu kaikkiin töihin
             <ArrowRight size={14} />

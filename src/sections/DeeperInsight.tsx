@@ -43,18 +43,18 @@ export default function DeeperInsight() {
     <section
       ref={sectionRef}
       className="relative z-10"
-      style={{ padding: "100px 24px 80px", backgroundColor: "#091525" }}
+      style={{ padding: "100px 24px 80px", backgroundColor: "var(--background-primary)" }}
     >
       {/* Fade from testimonials */}
       <div
         className="absolute top-0 left-0 right-0 h-20"
-        style={{ background: "linear-gradient(180deg, rgba(9,21,37,0) 0%, #091525 100%)" }}
+        style={{ background: "linear-gradient(180deg, var(--background-secondary) 0%, var(--background-primary) 100%)" }}
       />
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.05) 50%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, rgba(163,122,70,0.16) 50%, transparent 100%)",
         }}
       />
 
@@ -64,8 +64,8 @@ export default function DeeperInsight() {
           <div>
             {/* Eyebrow */}
             <p
-              className="insight-anim text-[11px] font-normal uppercase tracking-[0.2em]"
-              style={{ color: "rgba(200,172,75,0.50)" }}
+              className="insight-anim text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+              style={{ color: "var(--text-secondary-editorial)" }}
             >
               Verkkokokemus
             </p>
@@ -74,7 +74,7 @@ export default function DeeperInsight() {
             <h2
               className="insight-anim mt-6"
               style={{
-                color: "var(--text-primary)",
+                color: "var(--text-primary-editorial)",
                 fontFamily: "'Instrument Serif', serif",
                 fontSize: "clamp(1.5rem, 3.2vw, 2.1rem)",
                 lineHeight: 1.22,
@@ -87,8 +87,8 @@ export default function DeeperInsight() {
 
             {/* Intro */}
             <p
-              className="insight-anim mt-6 text-[14px] leading-[1.75] font-light"
-              style={{ color: "rgba(148,163,184,0.60)", maxWidth: "340px" }}
+              className="insight-anim mt-6 text-[17px] leading-[1.65] font-normal lg:text-[18px]"
+              style={{ color: "var(--text-secondary-editorial)", maxWidth: "60ch" }}
             >
               Kun ensivaikutelma tuntuu epäselvältä, moni hyväkin palvelu jää kokematta.
             </p>
@@ -101,16 +101,16 @@ export default function DeeperInsight() {
                 key={i}
                 className="group flex items-start gap-3 rounded-[10px] px-4 py-3.5 transition-all duration-300"
                 style={{
-                  background: "rgba(255,255,255,0.012)",
-                  border: "1px solid rgba(255,255,255,0.035)",
+                  background: "var(--surface-secondary)",
+                  border: "1px solid var(--border-subtle)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.025)";
-                  e.currentTarget.style.borderColor = "rgba(200,172,75,0.10)";
+                  e.currentTarget.style.background = "var(--surface-primary)";
+                  e.currentTarget.style.borderColor = "var(--border-strong)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.012)";
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.035)";
+                  e.currentTarget.style.background = "var(--surface-secondary)";
+                  e.currentTarget.style.borderColor = "var(--border-subtle)";
                 }}
               >
                 {/* Problem indicator — subtle circle, not checkmark */}
@@ -120,12 +120,12 @@ export default function DeeperInsight() {
                     width: "5px",
                     height: "5px",
                     borderRadius: "50%",
-                    background: "rgba(200,172,75,0.35)",
+                    background: "var(--accent-primary)",
                   }}
                 />
                 <p
-                  className="text-[13px] leading-[1.6] font-light"
-                  style={{ color: "rgba(226,232,240,0.65)" }}
+                  className="text-[15px] leading-[1.6] font-normal lg:text-[16px]"
+                  style={{ color: "var(--text-primary-editorial)" }}
                 >
                   {text}
                 </p>
@@ -140,13 +140,13 @@ export default function DeeperInsight() {
             style={{
               width: "24px",
               height: "1px",
-              background: "rgba(200,172,75,0.12)",
+              background: "rgba(163,122,70,0.20)",
               margin: "0 auto 20px",
             }}
           />
           <p
-            className="text-[13px] leading-[1.7] font-light"
-            style={{ color: "rgba(148,163,184,0.50)" }}
+            className="text-[16px] leading-[1.65] font-normal lg:text-[17px]"
+            style={{ color: "var(--text-secondary-editorial)" }}
           >
             Usein pienetkin kitkat vaikuttavat siihen, poistuuko kävijä sivulta vai ottaako hän yhteyttä.
           </p>

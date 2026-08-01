@@ -64,16 +64,16 @@ export default function Demo() {
       ref={sectionRef}
       className="relative"
       style={{
-        backgroundColor: "#0b1f35",
+        backgroundColor: "var(--background-emphasis)",
         padding: "80px 24px",
       }}
     >
-      {/* Gradient transition from pricing */}
+      {/* Gradient transition from the light FAQ/value statement */}
       <div
         className="absolute top-0 left-0 right-0 h-24"
         style={{
           background:
-            "linear-gradient(180deg, #091525 0%, #0b1f35 100%)",
+            "linear-gradient(180deg, var(--background-secondary) 0%, var(--background-emphasis) 100%)",
         }}
       />
 
@@ -84,15 +84,15 @@ export default function Demo() {
         {/* Left — reassurance copy */}
         <div className="demo-left lg:col-span-7">
           <p
-            className="text-[10px] font-normal uppercase tracking-[0.18em]"
-            style={{ color: "rgba(200,172,75,0.50)" }}
+            className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+            style={{ color: "var(--text-inverse-secondary)" }}
           >
             Riskitön ensiaskel
           </p>
           <h2
             className="mt-4 text-[1.7rem] leading-[1.15] sm:text-[2rem] lg:text-[2.4rem]"
             style={{
-              color: "var(--text-primary)",
+              color: "var(--text-inverse)",
               fontFamily: "'Instrument Serif', serif",
               letterSpacing: "-0.02em",
               maxWidth: "480px",
@@ -101,8 +101,8 @@ export default function Demo() {
             Voit nähdä suunnan ennen päätöstä.
           </h2>
           <p
-            className="mt-4 text-[13px] leading-[1.7] font-light"
-            style={{ color: "var(--text-secondary)", maxWidth: "420px" }}
+            className="mt-4 text-[16px] leading-[1.65] font-normal lg:text-[17px]"
+            style={{ color: "var(--text-inverse-secondary)", maxWidth: "60ch" }}
           >
             Rakennan demon nykyisestä sivustostasi — maksutta, ilman
             sitoumuksia. Näet tarkalleen mitä parannan ja miten se vaikuttaa
@@ -113,12 +113,12 @@ export default function Demo() {
               <div key={i} className="flex items-center gap-2.5">
                 <Check
                   size={14}
-                  style={{ color: "var(--accent-teal)" }}
+                  style={{ color: "var(--accent-primary)" }}
                   strokeWidth={2.5}
                 />
                 <span
-                  className="text-[13px] font-light"
-                  style={{ color: "var(--text-secondary)" }}
+                  className="text-[16px] font-normal leading-[1.6]"
+                  style={{ color: "var(--text-inverse-secondary)" }}
                 >
                   {b}
                 </span>
@@ -127,23 +127,8 @@ export default function Demo() {
           </div>
           <button
             onClick={openModal}
-            className="mt-8 rounded-[10px] px-8 py-3 text-[13px] font-normal tracking-wide transition-all duration-300"
-            style={{
-              backgroundColor: "var(--accent-gold)",
-              color: "var(--bg-secondary)",
-              letterSpacing: "0.02em",
-              boxShadow: "0 4px 20px rgba(200, 172, 75, 0.18)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#D4B85A";
-              e.currentTarget.style.boxShadow = "0 8px 28px rgba(200,172,75,0.35)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "var(--accent-gold)";
-              e.currentTarget.style.boxShadow = "0 4px 20px rgba(200,172,75,0.18)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
+            className="editorial-button editorial-button-primary-inverse mt-8 rounded-[10px] px-8 py-3 transition-all duration-300"
+            style={{ boxShadow: "0 4px 20px rgba(51, 46, 37, 0.22)" }}
           >
             Pyydä ilmainen demo
           </button>
@@ -155,7 +140,7 @@ export default function Demo() {
             className="overflow-hidden rounded-2xl"
             style={{
               boxShadow:
-                "0 16px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.05)",
+                "0 16px 48px rgba(51, 46, 37, 0.35), 0 0 0 1px rgba(185,183,177,0.24)",
             }}
           >
             <img

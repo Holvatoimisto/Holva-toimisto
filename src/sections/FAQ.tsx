@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Mitä demo käytännössä sisältää?",
-    a: "Suunnittelemme yrityksellenne henkilökohtaisen verkkosivudemonstration ja lähetämme siitä Loom-videon.\n\nVideolla käymme läpi:\n\nmiltä uusi suunta voisi näyttää\nmitä nykyisissä sivuissa voisi kehittää\nja miten kokonaisuutta voisi selkeyttää asiakkaan näkökulmasta\n\nTarkoitus ei ole myydä painostavasti, vaan näyttää konkreettisesti mitä mahdollisuuksia näemme.",
+    a: "Rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta ja sovimme demotapaamisen ajankohdan kanssanne.\n\nDemotapaamisessa käymme läpi:\n\nmiltä uusi suunta voisi näyttää\nmitä nykyisissä sivuissa voisi kehittää\nja miten kokonaisuutta voisi selkeyttää asiakkaan näkökulmasta\n\nTarkoitus ei ole myydä painostavasti, vaan näyttää konkreettisesti mitä mahdollisuuksia näemme.",
   },
   {
     q: "Voinko pyytää demon vaikka en olisi vielä valmis sitoutumaan?",
@@ -57,13 +57,13 @@ function FAQItem({ faq, isOpen, onToggle }: {
   return (
     <div
       style={{
-        borderTop: "1px solid rgba(255,255,255,0.035)",
+        borderTop: "1px solid var(--divider)",
         padding: "28px 0",
       }}
     >
       <button
         onClick={onToggle}
-        className="group flex w-full items-start justify-between gap-4 text-left transition-all duration-300"
+        className="editorial-focus group flex w-full items-start justify-between gap-4 text-left transition-all duration-300"
         style={{
           background: "none",
           border: "none",
@@ -80,9 +80,9 @@ function FAQItem({ faq, isOpen, onToggle }: {
         }}
       >
         <span
-          className="text-[15px] font-normal leading-[1.55] transition-colors duration-300"
+          className="text-[17px] font-medium leading-[1.5] transition-colors duration-300 sm:text-[18px]"
           style={{
-            color: isOpen ? "rgba(226,232,240,0.88)" : "rgba(226,232,240,0.65)",
+            color: "var(--text-primary-editorial)",
             letterSpacing: "-0.01em",
           }}
         >
@@ -91,7 +91,7 @@ function FAQItem({ faq, isOpen, onToggle }: {
         <span
           className="mt-0.5 flex-shrink-0 transition-all duration-300"
           style={{
-            color: isOpen ? "rgba(200,172,75,0.70)" : "rgba(148,163,184,0.30)",
+            color: isOpen ? "var(--accent-primary)" : "var(--text-decorative)",
             transform: isOpen ? "rotate(0deg)" : "rotate(0deg)",
           }}
         >
@@ -111,9 +111,9 @@ function FAQItem({ faq, isOpen, onToggle }: {
           {faq.a.split("\n\n").map((paragraph, i) => (
             <p
               key={i}
-              className="text-[14px] leading-[1.75] font-light"
+              className="text-[16px] leading-[1.7] font-normal sm:text-[17px]"
               style={{
-                color: "rgba(148,163,184,0.60)",
+                color: "var(--text-secondary-editorial)",
                 marginTop: i > 0 ? "12px" : "0",
               }}
             >
@@ -158,22 +158,22 @@ export default function FAQ() {
     <section
       ref={sectionRef}
       className="relative z-10"
-      style={{ padding: "100px 24px 80px", backgroundColor: "#091525" }}
+      style={{ padding: "100px 24px 80px", backgroundColor: "var(--background-primary)" }}
     >
       {/* Subtle top divider */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.05) 50%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, var(--divider) 50%, transparent 100%)",
         }}
       />
 
       <div className="relative mx-auto" style={{ maxWidth: "640px" }}>
         {/* Eyebrow */}
         <p
-          className="faq-anim text-[11px] font-normal uppercase tracking-[0.2em]"
-          style={{ color: "rgba(200,172,75,0.50)" }}
+          className="faq-anim text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+          style={{ color: "var(--text-secondary-editorial)" }}
         >
           FAQ
         </p>
@@ -182,7 +182,7 @@ export default function FAQ() {
         <h2
           className="faq-anim mt-6"
           style={{
-            color: "var(--text-primary)",
+            color: "var(--text-primary-editorial)",
             fontFamily: "'Instrument Serif', serif",
             fontSize: "clamp(1.5rem, 3.2vw, 2rem)",
             lineHeight: 1.22,
@@ -203,29 +203,34 @@ export default function FAQ() {
             />
           ))}
           {/* Bottom border */}
-          <div style={{ borderTop: "1px solid rgba(255,255,255,0.035)" }} />
+          <div style={{ borderTop: "1px solid var(--divider)" }} />
         </div>
 
-        {/* Emotional reset — premium quote before pricing */}
-        <div className="faq-anim mt-16 text-center" style={{ maxWidth: "420px", margin: "64px auto 0" }}>
+        {/* Value statement before the final CTA */}
+        <div className="faq-anim mt-16 text-center" style={{ maxWidth: "480px", margin: "64px auto 0" }}>
           <div
             style={{
               width: "24px",
               height: "1px",
-              background: "rgba(200,172,75,0.12)",
-              margin: "0 auto 28px",
+              background: "var(--accent-primary)",
+              margin: "0 auto 24px",
             }}
           />
           <p
             style={{
-              color: "rgba(226, 232, 240, 0.45)",
+              color: "var(--text-secondary-editorial)",
               fontFamily: "'Instrument Serif', serif",
-              fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)",
+              fontSize: "clamp(1.1rem, 2vw, 1.35rem)",
               lineHeight: 1.5,
               letterSpacing: "-0.01em",
             }}
           >
-            Hyvä verkkosivusto ei huuda huomiota. Se ohjaa luonnollisesti eteenpain.
+            Hyvin rakennettu verkkosivusto ei ainoastaan tuo enemmän
+            yhteydenottoja.
+            <br />
+            <span style={{ color: "var(--text-primary-editorial)" }}>
+              Se nostaa koko brändin arvoa pitkällä aikavälillä.
+            </span>
           </p>
         </div>
       </div>

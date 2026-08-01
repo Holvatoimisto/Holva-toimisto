@@ -6,6 +6,49 @@
 
 @layer base {
   :root {
+    /* Phase 1 editorial colour system */
+    --background-primary: #FFFFFF;
+    --background-secondary: #F8F8F7;
+    --background-emphasis: #332E25;
+
+    --surface-primary: #FFFFFF;
+    --surface-secondary: #F8F8F7;
+    --surface-inverse: #332E25;
+
+    --text-primary-editorial: #332E25;
+    --text-secondary-editorial: #5D5A50;
+    --text-muted-editorial: #5D5A50;
+    --text-decorative: #82807A;
+    --text-inverse: #FFFFFF;
+    --text-inverse-secondary: #B9B7B1;
+
+    --border-subtle: #B9B7B1;
+    --border-strong: #82807A;
+    --divider: #B9B7B1;
+    --accent-primary: #A37A46;
+
+    --button-primary-background: #332E25;
+    --button-primary-text: #FFFFFF;
+    --button-primary-hover: #5D5A50;
+    --button-primary-active: #332E25;
+    --button-secondary-background: transparent;
+    --button-secondary-text: #332E25;
+    --button-secondary-border: #82807A;
+    --button-secondary-hover-background: #F8F8F7;
+
+    --focus-ring: #A37A46;
+    --focus-offset-light: #FFFFFF;
+    --focus-offset-dark: #332E25;
+
+    --input-background: #FFFFFF;
+    --input-text: #332E25;
+    --input-placeholder: #5D5A50;
+    --input-border: #82807A;
+    --input-focus-border: #332E25;
+    --disabled-background: #B9B7B1;
+    --disabled-text: #332E25;
+
+    /* Legacy aliases remain for untouched Phase 2 pages. */
     --bg-primary: #18314F;
     --bg-secondary: #0D0630;
     --accent-gold: #C8AC4B;
@@ -33,25 +76,25 @@
     --section-px: 48px;
     --content-max: 1200px;
 
-    --background: 220 54% 20%;
-    --foreground: 0 0% 100%;
-    --card: 220 54% 20%;
-    --card-foreground: 0 0% 100%;
-    --popover: 260 73% 11%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 44 52% 54%;
-    --primary-foreground: 260 73% 11%;
-    --secondary: 260 73% 11%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 260 73% 11%;
-    --muted-foreground: 0 0% 100% / 0.45;
-    --accent: 44 52% 54%;
-    --accent-foreground: 260 73% 11%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 100% / 0.10;
-    --input: 0 0% 100% / 0.10;
-    --ring: 44 52% 54%;
+    --background: 0 0% 100%;
+    --foreground: 38.6 15.9% 17.3%;
+    --card: 0 0% 100%;
+    --card-foreground: 38.6 15.9% 17.3%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 38.6 15.9% 17.3%;
+    --primary: 38.6 15.9% 17.3%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 6.7% 97.1%;
+    --secondary-foreground: 38.6 15.9% 17.3%;
+    --muted: 60 6.7% 97.1%;
+    --muted-foreground: 46.2 7.5% 33.9%;
+    --accent: 60 6.7% 97.1%;
+    --accent-foreground: 38.6 15.9% 17.3%;
+    --destructive: 38.6 15.9% 17.3%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 5.4% 71%;
+    --input: 45 3.2% 49.4%;
+    --ring: 33.5 39.9% 45.7%;
     --radius: 0.625rem;
   }
 
@@ -83,6 +126,95 @@
   }
   .font-body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .editorial-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+  }
+
+  .editorial-button:focus-visible,
+  .editorial-focus:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  .editorial-button-primary {
+    background: var(--button-primary-background);
+    color: var(--button-primary-text);
+  }
+
+  .editorial-button-primary:hover {
+    background: var(--button-primary-hover);
+  }
+
+  .editorial-button-primary:active {
+    background: var(--button-primary-active);
+    transform: translateY(1px);
+  }
+
+  .editorial-button-primary-inverse {
+    background: var(--surface-primary);
+    color: var(--text-primary-editorial);
+  }
+
+  .editorial-button-primary-inverse:hover {
+    background: var(--text-inverse-secondary);
+  }
+
+  .editorial-button-secondary-light {
+    background: var(--button-secondary-background);
+    border: 1.5px solid var(--button-secondary-border);
+    color: var(--button-secondary-text);
+  }
+
+  .editorial-button-secondary-light:hover {
+    background: var(--button-secondary-hover-background);
+  }
+
+  .editorial-button-secondary-dark {
+    background: transparent;
+    border: 1.5px solid var(--text-inverse-secondary);
+    color: var(--text-inverse);
+  }
+
+  .editorial-button-secondary-dark:hover {
+    background: var(--surface-primary);
+    color: var(--text-primary-editorial);
+  }
+
+  .editorial-button:disabled,
+  .editorial-button[aria-disabled='true'] {
+    background: var(--disabled-background);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .editorial-input {
+    background: var(--input-background);
+    border: 1px solid var(--input-border);
+    color: var(--input-text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .editorial-input::placeholder {
+    color: var(--input-placeholder);
+    opacity: 1;
+  }
+
+  .editorial-input:focus-visible {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px var(--focus-ring), 0 0 0 5px var(--focus-offset-light);
+    outline: none;
   }
 }
 /* cache bust 1779647548 */

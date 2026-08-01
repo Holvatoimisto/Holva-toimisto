@@ -5,14 +5,18 @@ import Philosophy from "@/sections/Philosophy";
 import Palvelut from "@/sections/Palvelut";
 import Process from "@/sections/Process";
 import FAQ from "@/sections/FAQ";
-import Pricing from "@/sections/Pricing";
 import Demo from "@/sections/Demo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 export default function Home() {
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "var(--background-primary)",
+        color: "var(--text-primary-editorial)",
+      }}
+    >
       <SEO canonical="/" />
       <HeroAndProblem />
       <DeeperInsight />
@@ -21,7 +25,6 @@ export default function Home() {
       <Palvelut />
       <Process />
       <FAQ />
-      <Pricing />
       <Demo />
       <Footer />
     </div>

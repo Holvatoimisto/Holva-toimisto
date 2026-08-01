@@ -14,7 +14,7 @@ export default function Footer() {
     <footer
       className="relative"
       style={{
-        backgroundColor: "rgba(13, 6, 48, 0.95)",
+        backgroundColor: "var(--background-emphasis)",
         padding: "80px 48px 40px",
       }}
     >
@@ -23,7 +23,7 @@ export default function Footer() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, rgba(200, 172, 75, 0.12) 50%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, rgba(185, 183, 177, 0.34) 50%, transparent 100%)",
         }}
       />
 
@@ -41,10 +41,10 @@ export default function Footer() {
             />
           </div>
           <p
-            className="mt-5 text-sm"
-            style={{ color: "var(--text-muted)" }}
+            className="mt-5 text-[15px] leading-[1.5]"
+            style={{ color: "var(--text-inverse-secondary)" }}
           >
-            &copy; 2025 Holva Toimisto. Kaikki oikeudet pidätetään.
+            &copy; 2026 Holva Toimisto. Kaikki oikeudet pidätetään.
           </p>
         </div>
 
@@ -54,8 +54,8 @@ export default function Footer() {
             <Link
               key={link.path}
               to={link.path}
-              className="text-sm transition-colors duration-200 hover:text-[var(--accent-gold)]"
-              style={{ color: "var(--text-secondary)" }}
+              className="editorial-focus text-[15px] leading-[1.5] transition-colors duration-200 hover:text-white hover:underline"
+              style={{ color: "var(--text-inverse-secondary)" }}
             >
               {link.label}
             </Link>
@@ -66,12 +66,12 @@ export default function Footer() {
         <div>
           <a
             href="mailto:hei@holvatoimisto.fi"
-            className="text-sm transition-colors duration-200 hover:underline"
-            style={{ color: "var(--accent-teal)" }}
+            className="editorial-focus text-[15px] leading-[1.5] transition-colors duration-200 hover:underline"
+            style={{ color: "var(--text-inverse)" }}
           >
             hei@holvatoimisto.fi
           </a>
-          <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>
+          <p className="mt-2 text-[15px] leading-[1.5]" style={{ color: "var(--text-inverse-secondary)" }}>
             Helsinki, Suomi
           </p>
           <div className="mt-5 flex items-center gap-4">
@@ -80,8 +80,8 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="transition-colors duration-200 hover:text-white"
-              style={{ color: "var(--text-muted)" }}
+              className="editorial-focus transition-colors duration-200 hover:text-white"
+              style={{ color: "var(--text-inverse-secondary)" }}
             >
               <Linkedin size={20} />
             </a>
@@ -90,8 +90,8 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="transition-colors duration-200 hover:text-white"
-              style={{ color: "var(--text-muted)" }}
+              className="editorial-focus transition-colors duration-200 hover:text-white"
+              style={{ color: "var(--text-inverse-secondary)" }}
             >
               <Instagram size={20} />
             </a>
