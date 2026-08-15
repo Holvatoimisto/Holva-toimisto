@@ -13,7 +13,7 @@ const steps = [
   {
     number: "01",
     title: "Pyydä demo",
-    intro: "Täytät lyhyen lomakkeen, jonka perusteella suunnittelemme yrityksellesi henkilökohtaisen verkkosivudemonstration.",
+    intro: "Täytätte lyhyen lomakkeen, jonka perusteella rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta.",
     bullets: [
       "nykyisen verkkosivun ensivaikutelman",
       "rakenteen selkeyden",
@@ -24,8 +24,8 @@ const steps = [
   },
   {
     number: "02",
-    title: "Saat videodemon",
-    intro: "Rakennamme suunnan uudelle verkkosivulle ja lähetämme Loom-videon, jossa käymme kokonaisuuden käytännössä läpi.",
+    title: "Demo valmistuu",
+    intro: "Rakennamme demon perusteella suunnan ja sovimme demotapaamisen ajankohdan kanssanne.",
     bullets: [
       "miltä uusi ensivaikutelma voisi näyttää",
       "miten rakenne ja sisältö selkeytyvät",
@@ -66,7 +66,7 @@ const badges = [
   {
     icon: Eye,
     title: "Näet suunnan ennen toteutusta",
-    body: "Saat konkreettisen demon ja Loom-videon ennen lopullista päätöstä.",
+    body: "Saatte konkreettisen demon ennen lopullista päätöstä.",
   },
   {
     icon: MessageCircle,
@@ -399,8 +399,8 @@ export default function Prosessi() {
               margin: "16px auto 0",
             }}
           >
-            Suunnittelemme yrityksellenne henkilökohtaisen verkkosivudemon ja
-            käymme sen läpi Loom-videolla.
+            Rakennamme yrityksellenne henkilökohtaisen demon uudesta
+            verkkosivusuunnasta ja sovimme demotapaamisen kanssanne.
           </p>
           <button
             onClick={openModal}

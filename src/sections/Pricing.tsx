@@ -66,14 +66,14 @@ export default function Pricing() {
     <section
       ref={sectionRef}
       className="relative"
-      style={{ padding: "120px 24px 100px", backgroundColor: "#091525" }}
+      style={{ padding: "120px 24px 100px", backgroundColor: "var(--background-secondary)" }}
     >
       {/* Top divider */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, rgba(200,172,75,0.08) 50%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, rgba(163,122,70,0.20) 50%, transparent 100%)",
         }}
       />
 
@@ -81,8 +81,8 @@ export default function Pricing() {
         {/* ── Top header ── */}
         <div className="pr-anim text-center">
           <p
-            className="text-[11px] font-normal uppercase tracking-[0.25em]"
-            style={{ color: "rgba(200,172,75,0.50)" }}
+            className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em] sm:text-[13px]"
+            style={{ color: "var(--text-secondary-editorial)" }}
           >
             Investointi
           </p>
@@ -95,7 +95,7 @@ export default function Pricing() {
           {/* Line 1 — smaller, foundation statement */}
           <p
             style={{
-              color: "var(--text-primary)",
+              color: "var(--text-primary-editorial)",
               fontFamily: "'Instrument Serif', serif",
               fontSize: "clamp(1.4rem, 2.6vw, 1.9rem)",
               lineHeight: 1.3,
@@ -108,7 +108,7 @@ export default function Pricing() {
           <p
             className="mt-1"
             style={{
-              color: "var(--text-primary)",
+              color: "var(--text-primary-editorial)",
               fontFamily: "'Instrument Serif', serif",
               fontSize: "clamp(1.7rem, 3.4vw, 2.5rem)",
               lineHeight: 1.15,
@@ -120,8 +120,8 @@ export default function Pricing() {
         </div>
 
         <p
-          className="pr-anim mx-auto mt-5 text-center text-[14px] leading-[1.8] font-light"
-          style={{ color: "var(--text-secondary)", maxWidth: "520px" }}
+          className="pr-anim mx-auto mt-5 text-center text-[17px] leading-[1.65] font-normal lg:text-[18px]"
+          style={{ color: "var(--text-secondary-editorial)", maxWidth: "60ch" }}
         >
           Useimmat yritykset investoivat näkyvyyteen ennen kuin perusta on
           kunnossa. Kun verkkosivusto tukee asiakkaan päätöstä ottaa yhteyttä,
@@ -133,8 +133,8 @@ export default function Pricing() {
           className="pr-anim mt-14"
           style={{
             borderRadius: "14px",
-            border: "1px solid rgba(255,255,255,0.05)",
-            background: "rgba(255,255,255,0.015)",
+            border: "1px solid var(--border-subtle)",
+            background: "var(--surface-primary)",
             overflow: "hidden",
           }}
         >
@@ -146,8 +146,8 @@ export default function Pricing() {
             {/* LEFT */}
             <div style={{ padding: "36px 36px 32px" }}>
               <p
-                className="text-[10px] font-normal uppercase tracking-[0.18em]"
-                style={{ color: "rgba(200,172,75,0.50)" }}
+                className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em]"
+                style={{ color: "var(--text-secondary-editorial)" }}
               >
                 Premium verkkosivusto
               </p>
@@ -155,7 +155,7 @@ export default function Pricing() {
               <h3
                 className="mt-3"
                 style={{
-                  color: "var(--text-primary)",
+                  color: "var(--text-primary-editorial)",
                   fontFamily: "'Instrument Serif', serif",
                   fontSize: "1.35rem",
                   lineHeight: 1.22,
@@ -163,14 +163,14 @@ export default function Pricing() {
                   maxWidth: "300px",
                 }}
               >
-                Suunniteltu näyttämään yhtä laadukkaalta kuin palvelusi.
+                Suunniteltu tukemaan yhteydenottoa ja välittämään palvelun laadun.
               </h3>
 
               <p
-                className="mt-3 text-[12px] leading-[1.7] font-light"
-                style={{ color: "var(--text-secondary)", maxWidth: "320px" }}
+                className="mt-3 text-[15px] leading-[1.6] font-normal lg:text-[16px]"
+                style={{ color: "var(--text-secondary-editorial)", maxWidth: "45ch" }}
               >
-                Custom verkkosivustoja kasvaville hyvinvointibrändeille, jotka
+                Custom-verkkosivustoja kasvaville palveluyrityksille, jotka
                 haluavat vahvistaa luottamusta ja tehdä yhteydenotosta
                 luonnollisen seuraavan askeleen.
               </p>
@@ -180,9 +180,9 @@ export default function Pricing() {
                 {coreFeatures.map((f, i) => (
                   <div key={i} className="flex items-center gap-3.5">
                     <span
-                      className="text-[10px] font-normal tracking-[0.1em]"
+                      className="text-[12px] font-semibold leading-[1.4] tracking-[0.08em]"
                       style={{
-                        color: "rgba(200,172,75,0.50)",
+                        color: "var(--text-secondary-editorial)",
                         fontVariantNumeric: "tabular-nums",
                         width: "18px",
                       }}
@@ -190,8 +190,8 @@ export default function Pricing() {
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span
-                      className="text-[12px] font-normal"
-                      style={{ color: "rgba(226,232,240,0.70)" }}
+                      className="text-[16px] font-medium leading-[1.5]"
+                      style={{ color: "var(--text-primary-editorial)" }}
                     >
                       {f}
                     </span>
@@ -210,7 +210,7 @@ export default function Pricing() {
                 bottom: "10%",
                 width: "1px",
                 background:
-                  "linear-gradient(180deg, transparent 0%, rgba(200,172,75,0.12) 25%, rgba(200,172,75,0.12) 75%, transparent 100%)",
+                  "linear-gradient(180deg, transparent 0%, rgba(163,122,70,0.24) 25%, rgba(163,122,70,0.24) 75%, transparent 100%)",
               }}
             />
 
@@ -218,21 +218,21 @@ export default function Pricing() {
             <div
               style={{
                 padding: "36px 36px 32px",
-                borderTop: "1px solid rgba(255,255,255,0.04)",
+                borderTop: "1px solid var(--border-subtle)",
               }}
             >
               {/* Pricing anchor — top */}
               <div>
                 <p
-                  className="text-[10px] font-normal uppercase tracking-[0.15em]"
-                  style={{ color: "rgba(148,163,184,0.40)" }}
+                  className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em]"
+                  style={{ color: "var(--text-secondary-editorial)" }}
                 >
                   Projektit alk.
                 </p>
                 <p
                   className="mt-1"
                   style={{
-                    color: "var(--accent-gold)",
+                    color: "var(--text-primary-editorial)",
                     fontFamily: "'Instrument Serif', serif",
                     fontSize: "2.6rem",
                     lineHeight: 1.05,
@@ -244,10 +244,10 @@ export default function Pricing() {
               </div>
 
               <p
-                className="mt-4 text-[12px] leading-[1.7] font-light"
-                style={{ color: "rgba(148,163,184,0.45)", maxWidth: "240px" }}
+                className="mt-4 text-[15px] leading-[1.6] font-normal"
+                style={{ color: "var(--text-secondary-editorial)", maxWidth: "45ch" }}
               >
-                Jokainen projekti suunnitellaan yrityksesi tavoitteiden ja
+                Jokainen projekti suunnitellaan yrityksenne tavoitteiden ja
                 tarpeiden mukaan.
               </p>
 
@@ -257,7 +257,7 @@ export default function Pricing() {
                 style={{
                   height: "1px",
                   background:
-                    "linear-gradient(90deg, rgba(200,172,75,0.12) 0%, transparent 85%)",
+                    "linear-gradient(90deg, rgba(163,122,70,0.20) 0%, transparent 85%)",
                 }}
               />
 
@@ -270,8 +270,8 @@ export default function Pricing() {
                 ].map((t, i) => (
                   <p
                     key={i}
-                    className="text-[12px] font-light"
-                    style={{ color: "rgba(148,163,184,0.38)" }}
+                    className="text-[15px] font-normal leading-[1.6]"
+                    style={{ color: "var(--text-secondary-editorial)" }}
                   >
                     {t}
                   </p>
@@ -287,23 +287,24 @@ export default function Pricing() {
           <div className="flex items-center justify-between">
             <div>
               <p
-                className="text-[10px] font-normal uppercase tracking-[0.18em]"
-                style={{ color: "rgba(200,172,75,0.40)" }}
+                className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.10em]"
+                style={{ color: "var(--text-secondary-editorial)" }}
               >
                 Mahdollisuus jatkuvaan kehitykseen
               </p>
               <p
-                className="mt-1.5 text-[12px] font-light"
-                style={{ color: "rgba(148,163,184,0.40)" }}
+                className="mt-1.5 text-[15px] font-normal leading-[1.6]"
+                style={{ color: "var(--text-secondary-editorial)" }}
               >
-                Verkkosivustoa voidaan kehittää jatkuvasti yrityksesi mukana.
+                Verkkosivustoa voidaan kehittää jatkuvasti yrityksenne mukana.
               </p>
             </div>
             <span
-              className="text-[9px] font-normal uppercase tracking-[0.14em]"
+              className="text-[12px] font-semibold uppercase leading-[1.4] tracking-[0.08em]"
               style={{
-                color: "rgba(200,172,75,0.35)",
-                border: "1px solid rgba(200,172,75,0.12)",
+                color: "var(--text-primary-editorial)",
+                border: "1px solid var(--accent-primary)",
+                background: "var(--surface-secondary)",
                 borderRadius: "5px",
                 padding: "3px 10px",
               }}
@@ -320,34 +321,34 @@ export default function Pricing() {
                 className="group transition-all duration-300"
                 style={{
                   borderRadius: "10px",
-                  border: "1px solid rgba(255,255,255,0.04)",
-                  background: "rgba(255,255,255,0.012)",
+                  border: "1px solid var(--border-subtle)",
+                  background: "var(--surface-secondary)",
                   padding: "20px 22px",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-                  e.currentTarget.style.background = "rgba(255,255,255,0.022)";
+                  e.currentTarget.style.borderColor = "var(--border-strong)";
+                  e.currentTarget.style.background = "var(--surface-primary)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.04)";
-                  e.currentTarget.style.background = "rgba(255,255,255,0.012)";
+                  e.currentTarget.style.borderColor = "var(--border-subtle)";
+                  e.currentTarget.style.background = "var(--surface-secondary)";
                 }}
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-6">
                   {/* Left: num + name */}
                   <div className="flex items-baseline gap-3 sm:w-44 sm:flex-shrink-0">
                     <span
-                      className="text-[10px] font-normal tracking-[0.1em]"
+                      className="text-[12px] font-semibold leading-[1.4] tracking-[0.08em]"
                       style={{
-                        color: "rgba(200,172,75,0.40)",
+                        color: "var(--text-secondary-editorial)",
                         fontVariantNumeric: "tabular-nums",
                       }}
                     >
                       {a.num}
                     </span>
                     <span
-                      className="text-[13px] font-normal"
-                      style={{ color: "rgba(226,232,240,0.65)" }}
+                      className="text-[16px] font-semibold leading-[1.5]"
+                      style={{ color: "var(--text-primary-editorial)" }}
                     >
                       {a.name}
                     </span>
@@ -355,16 +356,16 @@ export default function Pricing() {
 
                   {/* Center: description */}
                   <p
-                    className="flex-1 text-[12px] leading-[1.6] font-light"
-                    style={{ color: "rgba(148,163,184,0.40)" }}
+                    className="flex-1 text-[15px] leading-[1.6] font-normal"
+                    style={{ color: "var(--text-secondary-editorial)" }}
                   >
                     {a.desc}
                   </p>
 
                   {/* Right: price */}
                   <p
-                    className="text-[12px] font-normal sm:flex-shrink-0"
-                    style={{ color: "rgba(200,172,75,0.50)", minWidth: "56px" }}
+                    className="text-[15px] font-semibold leading-[1.5] sm:flex-shrink-0"
+                    style={{ color: "var(--text-primary-editorial)", minWidth: "56px" }}
                   >
                     {a.price}
                   </p>
@@ -378,29 +379,13 @@ export default function Pricing() {
         <div className="pr-anim mx-auto mt-14 text-center" style={{ maxWidth: "440px" }}>
           <button
             onClick={openModal}
-            className="rounded-[10px] px-9 py-[11px] text-[13px] font-normal tracking-wide transition-all duration-300"
-            style={{
-              backgroundColor: "var(--accent-gold)",
-              color: "var(--bg-secondary)",
-              letterSpacing: "0.02em",
-              boxShadow: "0 4px 20px rgba(200,172,75,0.18)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#D4B85A";
-              e.currentTarget.style.boxShadow = "0 8px 28px rgba(200,172,75,0.35)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "var(--accent-gold)";
-              e.currentTarget.style.boxShadow = "0 4px 20px rgba(200,172,75,0.18)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
+            className="editorial-button editorial-button-primary rounded-[10px] px-9 py-[11px] transition-all duration-300"
           >
-            Pyydä henkilökohtainen Loom-demo
+            Pyydä henkilökohtainen demo
           </button>
           <p
-            className="mt-3 text-[12px] leading-[1.7] font-light"
-            style={{ color: "rgba(148,163,184,0.35)" }}
+            className="mt-3 text-[14px] leading-[1.6] font-normal"
+            style={{ color: "var(--text-secondary-editorial)" }}
           >
             Maksuton. Ilman sitoumuksia.
           </p>
@@ -415,13 +400,13 @@ export default function Pricing() {
             style={{
               width: "24px",
               height: "1px",
-              background: "rgba(200,172,75,0.12)",
+              background: "rgba(163,122,70,0.22)",
               margin: "0 auto 24px",
             }}
           />
           <p
             style={{
-              color: "rgba(226, 232, 240, 0.40)",
+              color: "var(--text-secondary-editorial)",
               fontFamily: "'Instrument Serif', serif",
               fontSize: "clamp(1.1rem, 2vw, 1.35rem)",
               lineHeight: 1.5,
@@ -431,7 +416,7 @@ export default function Pricing() {
             Hyvin rakennettu verkkosivusto ei ainoastaan tuo enemmän
             yhteydenottoja.
             <br />
-            <span style={{ color: "rgba(226, 232, 240, 0.60)" }}>
+            <span style={{ color: "var(--text-primary-editorial)" }}>
               Se nostaa koko brändin arvoa pitkällä aikavälillä.
             </span>
           </p>

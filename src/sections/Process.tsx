@@ -8,22 +8,22 @@ const steps = [
   {
     number: "01",
     heading: "Pyydä demo",
-    text: "Täytät lyhyen lomakkeen, jonka perusteella suunnittelemme yrityksellesi henkilökohtaisen verkkosivudemonstration.",
+    text: "Täytätte lyhyen lomakkeen, jonka perusteella rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta.",
   },
   {
     number: "02",
-    heading: "Saat videodemon",
-    text: "Lähetämme Loom-videon, jossa käymme läpi uuden verkkosivun suunnan ja ideat käytännössä.",
+    heading: "Demo valmistuu",
+    text: "Rakennamme demon perusteella suunnan ja sovimme demotapaamisen ajankohdan kanssanne.",
   },
   {
     number: "03",
     heading: "Käydään suunta yhdessä läpi",
-    text: "Varaamme lyhyen Teams-palaverin, jossa käymme yhdessä läpi tavoitteesi, vastaan kysymyksiisi ja päätämme tuntuuko yhteistyö hyvältä ratkaisulta.",
+    text: "Varaamme lyhyen Teams-palaverin, jossa käymme yhdessä läpi tavoitteenne, vastaamme kysymyksiinne ja päätämme yhdessä, tuntuuko yhteistyö hyvältä ratkaisulta.",
   },
   {
     number: "04",
     heading: "Sivusto viimeistellään ja julkaistaan",
-    text: "Viimeistelemme verkkosivukokonaisuuden, joka näyttää uskottavalta ja toimii sujuvasti kaikilla laitteilla.",
+    text: "Viimeistelemme verkkosivukokonaisuuden, joka välittää palvelun laadun, rakentaa luottamusta ja ohjaa yhteydenottoon kaikilla laitteilla.",
   },
 ];
 

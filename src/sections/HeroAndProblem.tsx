@@ -124,7 +124,7 @@ export default function HeroAndProblem() {
               className="hero-animate mb-3 text-[11px] font-normal uppercase tracking-[0.16em]"
               style={{ color: "rgba(200, 172, 75, 0.65)" }}
             >
-              Premium verkkosivut hyvinvointibrändeille
+              Premium-verkkosivut palveluyrityksille
             </p>
 
             {/* Subtle glow behind headline */}
@@ -220,7 +220,7 @@ export default function HeroAndProblem() {
               className="hero-animate mt-3 max-w-[400px] text-[12px] leading-[1.7] font-light"
               style={{ color: "rgba(148, 163, 184, 0.60)" }}
             >
-              Täytä lyhyt lomake ja saat demon uusista sivuista 3 päivän sisällä.
+              Täyttäkää lyhyt lomake. Rakennamme yrityksellenne henkilökohtaisen demon ja otamme yhteyttä demotapaamisen sopimiseksi.
             </p>
 
             {/* Inline trust row */}
@@ -229,12 +229,12 @@ export default function HeroAndProblem() {
               style={{ color: "rgba(148, 163, 184, 0.52)" }}
             >
               <span>
-                <span style={{ color: "rgba(200, 172, 75, 0.55)" }}>★</span> 4.8/5 Google-arvosteluista
+                <span style={{ color: "rgba(200, 172, 75, 0.55)" }}>★</span> 4.9/5 Google-arvosteluista · 7 arvostelua
               </span>
               <span style={{ color: "rgba(148, 163, 184, 0.25)" }}>•</span>
               <span>Riskitön ensiaskel</span>
               <span style={{ color: "rgba(148, 163, 184, 0.25)" }}>•</span>
-              <span>Suunniteltu tukemaan yhteydenottoa</span>
+              <span>Maksuton. Ilman sitoumuksia.</span>
             </div>
           </div>
 

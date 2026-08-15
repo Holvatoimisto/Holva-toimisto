@@ -84,7 +84,7 @@ export default function Palvelut() {
           {/* Left: Copy */}
           <div className="lg:col-span-5">
             <p className="p2-anim text-[11px] font-normal uppercase tracking-[0.16em]" style={{ color: "rgba(200,172,75,0.55)" }}>
-              Premium verkkosivustot hyvinvointibrändeille
+              Premium-verkkosivustot palveluyrityksille
             </p>
             <h2 className="p2-anim mt-3 text-[1.6rem] leading-[1.12] sm:text-[1.9rem] lg:text-[2.1rem]"
               style={{ color: "var(--text-primary)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em", maxWidth: "380px" }}>
@@ -307,7 +307,7 @@ export default function Palvelut() {
         <div className="mx-auto text-center" style={{ maxWidth: "560px" }}>
           <h2 className="p5-anim text-[1.8rem] leading-[1.05] sm:text-[2.1rem] lg:text-[2.4rem]"
             style={{ color: "var(--text-primary)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em" }}>
-            Pyydä henkilökohtainen Loom-demo
+            Pyydä henkilökohtainen demo
           </h2>
           <p className="p5-anim mt-4 text-[14px] leading-[1.7] font-light" style={{ color: "var(--text-secondary)" }}>
             Täytä lyhyt lomake, niin suunnittelemme yrityksellesi henkilökohtaisen demonstraation siitä, miltä verkkonäkyvyytesi voisi parhaimmillaan näyttää ja tuntua.

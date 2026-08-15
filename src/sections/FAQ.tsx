@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Mitä demo käytännössä sisältää?",
-    a: "Suunnittelemme yrityksellenne henkilökohtaisen verkkosivudemonstration ja lähetämme siitä Loom-videon.\n\nVideolla käymme läpi:\n\nmiltä uusi suunta voisi näyttää\nmitä nykyisissä sivuissa voisi kehittää\nja miten kokonaisuutta voisi selkeyttää asiakkaan näkökulmasta\n\nTarkoitus ei ole myydä painostavasti, vaan näyttää konkreettisesti mitä mahdollisuuksia näemme.",
+    a: "Rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta ja sovimme demotapaamisen ajankohdan kanssanne.\n\nDemotapaamisessa käymme läpi:\n\nmiltä uusi suunta voisi näyttää\nmitä nykyisissä sivuissa voisi kehittää\nja miten kokonaisuutta voisi selkeyttää asiakkaan näkökulmasta\n\nTarkoitus ei ole myydä painostavasti, vaan näyttää konkreettisesti mitä mahdollisuuksia näemme.",
   },
   {
     q: "Voinko pyytää demon vaikka en olisi vielä valmis sitoutumaan?",
@@ -206,26 +206,31 @@ export default function FAQ() {
           <div style={{ borderTop: "1px solid rgba(255,255,255,0.035)" }} />
         </div>
 
-        {/* Emotional reset — premium quote before pricing */}
-        <div className="faq-anim mt-16 text-center" style={{ maxWidth: "420px", margin: "64px auto 0" }}>
+        {/* Value statement before the final CTA */}
+        <div className="faq-anim mt-16 text-center" style={{ maxWidth: "480px", margin: "64px auto 0" }}>
           <div
             style={{
               width: "24px",
               height: "1px",
               background: "rgba(200,172,75,0.12)",
-              margin: "0 auto 28px",
+              margin: "0 auto 24px",
             }}
           />
           <p
             style={{
-              color: "rgba(226, 232, 240, 0.45)",
+              color: "rgba(226, 232, 240, 0.40)",
               fontFamily: "'Instrument Serif', serif",
-              fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)",
+              fontSize: "clamp(1.1rem, 2vw, 1.35rem)",
               lineHeight: 1.5,
               letterSpacing: "-0.01em",
             }}
           >
-            Hyvä verkkosivusto ei huuda huomiota. Se ohjaa luonnollisesti eteenpain.
+            Hyvin rakennettu verkkosivusto ei ainoastaan tuo enemmän
+            yhteydenottoja.
+            <br />
+            <span style={{ color: "rgba(226, 232, 240, 0.60)" }}>
+              Se nostaa koko brändin arvoa pitkällä aikavälillä.
+            </span>
           </p>
         </div>
       </div>

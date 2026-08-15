@@ -11,7 +11,7 @@ interface SEOProps {
 const BASE = "https://holvatoimisto.fi";
 const DEFAULT_IMAGE = "/og-image.jpg";
 const DEFAULT_DESC =
-  "Rakennamme hyvinvointibrändeille verkkosivustoja, jotka tekevät ensivaikutelmasta selkeämmän ja yhteydenotosta helpompaa.";
+  "Rakennamme palveluyrityksille verkkosivustoja, jotka välittävät palvelun laadun, rakentavat luottamusta ja ohjaavat yhteydenottoon.";
 
 export default function SEO({
   title,
@@ -22,7 +22,7 @@ export default function SEO({
 }: SEOProps) {
   const fullTitle = title
     ? `${title} | Holva Toimisto`
-    : "Holva Toimisto | Premium verkkosivut hyvinvointibrändeille";
+    : "Holva Toimisto | Premium-verkkosivut palveluyrityksille";
   const fullUrl = canonical ? `${BASE}${canonical}` : BASE;
   const fullImage = ogImage.startsWith("http") ? ogImage : `${BASE}${ogImage}`;
 

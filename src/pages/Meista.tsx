@@ -97,7 +97,7 @@ export default function Meista() {
 
   return (
     <div style={{ paddingTop: "var(--nav-height)" }}>
-      <SEO title="Meistä" description="Tutustu Holva Toimistoon — rakennamme premium-verkkosivustoja hyvinvointibrändeille." canonical="/meista" />
+      <SEO title="Meistä" description="Tutustu Holva Toimistoon — rakennamme premium-verkkosivustoja palveluyrityksille." canonical="/meista" />
       {/* Hero */}
       <section
         className="relative flex flex-col items-center justify-center px-6 text-center"

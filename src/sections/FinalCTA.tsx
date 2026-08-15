@@ -14,7 +14,7 @@ interface FinalCTAProps {
 
 export default function FinalCTA({
   headline = "Haluatteko nähdä miltä sivunne voisi näyttää oikein rakennettuna?",
-  body = "Lähetämme teille henkilökohtaisen Loom-videodemon uudesta verkkosivusuunnasta noin 3 päivän sisällä.",
+  body = "Rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta ja sovimme demotapaamisen kanssanne.",
   buttonText = "Pyydä demo",
   helperText = "Ei sitoumuksia. Ei myyntipuhelua.",
 }: FinalCTAProps) {

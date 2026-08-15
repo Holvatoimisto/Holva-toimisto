@@ -128,7 +128,7 @@ export default function CTAModal({ open, onClose }: CTAModalProps) {
 
             {/* Headline */}
             <p className="mt-8 text-[17px] leading-[1.55] font-light" style={{ color: "var(--text-secondary)" }}>
-              Rakennamme sinulle henkilökohtaisen Loom-videodemon siitä, miltä verkkosivustosi voisi näyttää ja tuntua.
+              Rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta ja sovimme demotapaamisen kanssanne.
             </p>
 
             {/* Sub text */}
@@ -154,7 +154,7 @@ export default function CTAModal({ open, onClose }: CTAModalProps) {
                 Pyydä henkilökohtainen demo
               </p>
               <p className="mt-1 text-xs font-light" style={{ color: "var(--text-muted)" }}>
-                Rakennamme sinulle henkilökohtaisen Loom-demonstration.
+                Rakennamme yrityksellenne henkilökohtaisen demon uudesta verkkosivusuunnasta.
               </p>
             </div>
 

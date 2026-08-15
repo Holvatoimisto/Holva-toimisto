@@ -44,7 +44,7 @@ export default function Footer() {
             className="mt-5 text-sm"
             style={{ color: "var(--text-muted)" }}
           >
-            &copy; 2025 Holva Toimisto. Kaikki oikeudet pidätetään.
+            &copy; 2026 Holva Toimisto. Kaikki oikeudet pidätetään.
           </p>
         </div>
 

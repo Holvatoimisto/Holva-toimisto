@@ -68,7 +68,7 @@ export default function Demo() {
         padding: "80px 24px",
       }}
     >
-      {/* Gradient transition from pricing */}
+      {/* Gradient transition from the FAQ/value statement */}
       <div
         className="absolute top-0 left-0 right-0 h-24"
         style={{

@@ -82,7 +82,7 @@ function CollapsibleContactForm() {
           Pyydä henkilökohtainen demo
         </h3>
         <p className="mt-2 text-center text-sm" style={{ color: "var(--text-muted)" }}>
-          Täytä tiedot, lähetämme sinulle Loom-videodemon 3 päivän sisällä.
+          Täyttäkää tiedot. Rakennamme yrityksellenne henkilökohtaisen demon ja otamme yhteyttä demotapaamisen sopimiseksi.
         </p>
       </div>
 
@@ -246,7 +246,7 @@ export default function Contact() {
         <div ref={heroRef} className="mx-auto text-center px-6" style={{ maxWidth: "680px" }}>
           <p className="contact-anim text-[11px] font-normal uppercase tracking-[0.16em]" style={{ color: "rgba(200,172,75,0.65)" }}>Ota yhteyttä</p>
           <h1 className="contact-anim mt-3 text-[2rem] leading-[1.08] sm:text-[2.4rem] lg:text-[2.8rem]" style={{ color: "var(--text-primary)", fontFamily: "'Instrument Serif', serif", letterSpacing: "-0.02em" }}>
-            Keskustellaan yrityksesi verkkosivustosta.
+            Keskustellaan yrityksenne verkkosivustosta.
           </h1>
           <p className="contact-anim mt-4 text-[15px] leading-[1.65] font-light" style={{ color: "var(--text-secondary)" }}>
             Voit pyytää henkilökohtaisen demon, kysyä projektista tai ottaa yhteyttä matalalla kynnyksellä. Vastaamme yleensä 24 tunnin sisällä.

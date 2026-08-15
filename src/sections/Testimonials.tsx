@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const googleReviewsUrl =
+  "https://www.google.com/search?sa=X&sca_esv=e755c4fcff4cb9a6&sxsrf=APpeQnsIscl4irLxtFWp6_UL634lRFLbNA:1785529145305&q=Holva+Toimisto+Arvostelut&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NTY0Nrc0MTYxNzAzswQCE8MNjIyvGCU98nPKEhVC8jNzM4tL8hUci8ryi0tSc0pLFrHilgMArkAS91IAAAA&rldimm=5313794347066999941&tbm=lcl&hl=fi-FI&ved=2ahUKEwiJmcSz3v2VAxWzFBAIHdLPKUMQ9fQKegQIRhAG&biw=1422&bih=612&dpr=1.35#lkt=LocalPoiReviews";
+
 const reviews = [
   {
     name: "Sini Oksanen",
@@ -77,7 +80,7 @@ export default function Testimonials() {
               className="text-[12px] font-normal"
               style={{ color: "rgba(226,232,240,0.50)" }}
             >
-              4.8/5 Google-arvosteluista
+              4.9/5 Google-arvosteluista · 7 arvostelua
             </span>
           </div>
 
@@ -142,7 +145,7 @@ export default function Testimonials() {
           {/* ── Soft CTA ── */}
           <div className="t-anim mt-8 text-center">
             <a
-              href="https://www.google.com/search?q=Holva+Toimisto+arvostelut&tbm=lcl"
+              href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-[12px] font-light tracking-wide transition-colors duration-300"

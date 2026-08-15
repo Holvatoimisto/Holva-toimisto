@@ -79,7 +79,7 @@ export default function Philosophy() {
             className="text-[14px] leading-[1.75] font-light"
             style={{ color: "rgba(148,163,184,0.65)" }}
           >
-            Hyvinvointialalla luottamus ei synny siitä, että kaikki näyttää viimeistellyltä. Se syntyy siitä, että verkkosivusto tuntuu aidosti yrityksenne näköiseltä.
+            Palvelualalla luottamus ei synny siitä, että kaikki näyttää viimeistellyltä. Se syntyy siitä, että verkkosivusto välittää palvelun laadun, rakentaa luottamusta ja ohjaa yhteydenottoon.
           </p>
         </div>
 
