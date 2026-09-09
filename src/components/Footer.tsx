@@ -7,6 +7,7 @@ const footerLinks = [
   { label: "Case-esimerkit", path: "/case-esimerkit" },
   { label: "Prosessi", path: "/prosessi" },
   { label: "Ota yhteyttä", path: "/ota-yhteytta" },
+  { label: "Tietosuojaseloste", path: "/tietosuojaseloste" },
 ];
 
 export default function Footer() {

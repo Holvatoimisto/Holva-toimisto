@@ -8,6 +8,7 @@ import Meista from './pages/Meista'
 import CaseEsimerkit from './pages/CaseEsimerkit'
 import Prosessi from './pages/Prosessi'
 import Contact from './pages/Contact'
+import Tietosuojaseloste from './pages/Tietosuojaseloste'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/case-esimerkit" element={<CaseEsimerkit />} />
             <Route path="/prosessi" element={<Prosessi />} />
             <Route path="/ota-yhteytta" element={<Contact />} />
+            <Route path="/tietosuojaseloste" element={<Tietosuojaseloste />} />
           </Routes>
           <GlobalModal />
         </div>

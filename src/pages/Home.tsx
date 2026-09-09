@@ -3,6 +3,7 @@ import HomeCaseStudies from "@/sections/HomeCaseStudies";
 import DeeperInsight from "@/sections/DeeperInsight";
 import Philosophy from "@/sections/Philosophy";
 import Palvelut from "@/sections/Palvelut";
+import Kasvupaketti from "@/sections/Kasvupaketti";
 import Process from "@/sections/Process";
 import FAQ from "@/sections/FAQ";
 import Demo from "@/sections/Demo";
@@ -18,6 +19,7 @@ export default function Home() {
       <HomeCaseStudies />
       <Philosophy />
       <Palvelut />
+      <Kasvupaketti />
       <Process />
       <FAQ />
       <Demo />
