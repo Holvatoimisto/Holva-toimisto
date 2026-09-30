@@ -1,0 +1,547 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   HOLVA V2 — DESIGN TOKENS
+   Brand: navy + gold (poimittu Holvan logo-asseteista)
+   navy: alkuperäisen Holva-logon syvä taustanavy → #031625
+   gold: logo-wordmarkin metallinen kulta → #AE8F4A
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* Brand */
+    --navy: #031625;
+    --navy-deep: #02101C;
+    --gold: #AE8F4A;
+    --gold-deep: #99793D;
+
+    /* Light surfaces */
+    --bg: #FFFFFF;
+    --bg-alt: #F7F7F5;
+
+    /* Text on light */
+    --ink: #031625;
+    --body: #445266;
+    --muted: #66748A;
+
+    /* Text on dark */
+    --on-dark: #FFFFFF;
+    --on-dark-body: rgba(255, 255, 255, 0.78);
+    --on-dark-muted: rgba(255, 255, 255, 0.6);
+
+    /* Lines / borders */
+    --line: rgba(3, 22, 37, 0.12);
+    --line-strong: rgba(3, 22, 37, 0.22);
+    --line-dark: rgba(255, 255, 255, 0.14);
+
+    /* Radii */
+    --r-button: 8px;
+    --r-input: 8px;
+    --r-card: 12px;
+    --r-media: 16px;
+
+    /* Layout */
+    --nav-height: 76px;
+    --container-wide: 1280px;
+    --container-standard: 1120px;
+    --container-text: 720px;
+
+    /* Shadows (hillitty) */
+    --shadow-card: 0 1px 2px rgba(3, 22, 37, 0.05), 0 8px 24px rgba(3, 22, 37, 0.06);
+    --shadow-modal: 0 32px 90px rgba(2, 16, 28, 0.28);
+
+    /* shadcn/ui compatibility (light theme) */
+    --background: 0 0% 100%;
+    --foreground: 213 56% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 56% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 56% 20%;
+    --primary: 213 56% 20%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 4% 96%;
+    --secondary-foreground: 213 56% 20%;
+    --muted-h: 60 4% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 44 52% 54%;
+    --accent-foreground: 213 56% 20%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 213 30% 88%;
+    --input: 213 30% 82%;
+    --ring: 44 52% 54%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--body);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (max-width: 767px) {
+    body {
+      font-size: 16px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: rgba(174, 143, 74, 0.28);
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY SCALE (spec §10)
+   ============================================================ */
+
+@layer components {
+  .t-hero {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 4.2vw, 53px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .t-page {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: clamp(34px, 3.8vw, 47px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+  }
+  .t-h2 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: clamp(30px, 3vw, 39px);
+    line-height: 1.16;
+  }
+  .t-statement {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: clamp(26px, 2.6vw, 32px);
+    line-height: 1.25;
+  }
+  .t-h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(19px, 1.6vw, 20px);
+    line-height: 1.35;
+  }
+  .t-lead {
+    font-size: clamp(17px, 1.5vw, 18px);
+    line-height: 1.65;
+    font-weight: 400;
+  }
+  .t-body {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  @media (min-width: 768px) {
+    .t-body {
+      font-size: 17px;
+    }
+  }
+  .t-small {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .t-meta {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .t-eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* ============================================================
+   LAYOUT — containers, gutters, section spacing (spec §11)
+   ============================================================ */
+
+@layer components {
+  .container-v2 {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 22px;
+  }
+  @media (min-width: 768px) {
+    .container-v2 {
+      padding-inline: 32px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-v2 {
+      padding-inline: 56px;
+    }
+  }
+  .container-wide {
+    max-width: calc(var(--container-wide) + 112px);
+  }
+  .container-standard {
+    max-width: calc(var(--container-standard) + 112px);
+  }
+  .container-text {
+    max-width: calc(var(--container-text) + 44px);
+  }
+
+  /* Section vertical rhythm */
+  .section-lg {
+    padding-block: 84px;
+  }
+  .section-md {
+    padding-block: 64px;
+  }
+  .section-sm {
+    padding-block: 48px;
+  }
+  @media (min-width: 1024px) {
+    .section-lg {
+      padding-block: 120px;
+    }
+    .section-md {
+      padding-block: 96px;
+    }
+    .section-sm {
+      padding-block: 66px;
+    }
+  }
+
+  .surface-navy {
+    background-color: var(--navy);
+    color: var(--on-dark-body);
+  }
+  .surface-navy h1,
+  .surface-navy h2,
+  .surface-navy h3,
+  .surface-navy h4 {
+    color: var(--on-dark);
+  }
+  .surface-alt {
+    background-color: var(--bg-alt);
+  }
+}
+
+/* ============================================================
+   BUTTONS (spec §13)
+   ============================================================ */
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 50px;
+    padding: 0 26px;
+    border-radius: var(--r-button);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  /* Primary on light surface: navy bg / white text */
+  .btn-primary {
+    background-color: var(--navy);
+    color: #fff;
+    border: 1px solid var(--navy);
+  }
+  .btn-primary:hover {
+    background-color: var(--navy-deep);
+    border-color: var(--navy-deep);
+  }
+
+  /* Primary on dark surface: gold bg / navy text */
+  .btn-primary-on-dark {
+    background-color: var(--gold);
+    color: var(--navy);
+    border: 1px solid var(--gold);
+  }
+  .btn-primary-on-dark:hover {
+    background-color: var(--gold-deep);
+    border-color: var(--gold-deep);
+  }
+
+  /* Secondary: transparent + border */
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--navy);
+    border: 1px solid var(--line-strong);
+  }
+  .btn-secondary:hover {
+    border-color: var(--navy);
+  }
+  .btn-secondary-on-dark {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+  .btn-secondary-on-dark:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Text link */
+  .btn-textlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(3, 22, 37, 0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+  }
+  .btn-textlink:hover {
+    border-color: var(--gold);
+  }
+  .btn-textlink-on-dark {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.35);
+  }
+  .btn-textlink-on-dark:hover {
+    border-bottom-color: var(--gold);
+  }
+
+  @media (max-width: 480px) {
+    .btn-block-mobile {
+      width: 100%;
+    }
+  }
+}
+
+/* ============================================================
+   IMAGE PLACEHOLDER (spec §6) — tarkoituksellinen, ei rikkinäinen
+   ============================================================ */
+
+@layer components {
+  .img-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--r-media);
+    border: 1.5px dashed rgba(3, 22, 37, 0.28);
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 14px,
+        rgba(3, 22, 37, 0.025) 14px,
+        rgba(3, 22, 37, 0.025) 28px
+      ),
+      var(--bg-alt);
+    overflow: hidden;
+  }
+  .img-placeholder-on-dark {
+    border-color: rgba(255, 255, 255, 0.3);
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 14px,
+        rgba(255, 255, 255, 0.03) 14px,
+        rgba(255, 255, 255, 0.03) 28px
+      ),
+      rgba(255, 255, 255, 0.04);
+  }
+  .img-placeholder-label {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .img-placeholder-label::before {
+    content: '';
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+  }
+  .img-placeholder-on-dark .img-placeholder-label {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+/* ============================================================
+   LINK HOVER-UTILITIES (inline-tyylien sijaan)
+   ============================================================ */
+
+@layer components {
+  .footer-link {
+    color: var(--on-dark-body);
+    transition: color 0.2s ease;
+  }
+  .footer-link:hover {
+    color: #fff;
+  }
+  .footer-link-muted {
+    color: var(--on-dark-muted);
+    transition: color 0.2s ease;
+  }
+  .footer-link-muted:hover {
+    color: #fff;
+  }
+  .icon-link {
+    color: var(--on-dark-muted);
+    border: 1px solid var(--line-dark);
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .icon-link:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  .icon-link-light {
+    color: var(--muted);
+    border: 1px solid var(--line);
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .icon-link-light:hover {
+    color: var(--navy);
+    border-color: var(--navy);
+  }
+}
+
+/* ============================================================
+   MOTION (spec §31) — hillitty fade + rise, reduced-motion safe
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   TIETOSUOJASELOSTE — body typography (sisältö säilytetty)
+   ============================================================ */
+
+.tietosuoja-body h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+.tietosuoja-body h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+.tietosuoja-body p {
+  margin-bottom: 16px;
+}
+.tietosuoja-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tietosuoja-body li {
+  position: relative;
+  padding-left: 18px;
+}
+.tietosuoja-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 8px;
+  height: 1.5px;
+  background: var(--gold);
+}
+.tietosuoja-body a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
