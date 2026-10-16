@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        description="Suunnittelemme palveluyrityksille verkkosivustoja, jotka tekevät palvelunne laadun näkyväksi, rakentavat luottamusta ja ohjaavat kävijän selkeästi kohti yhteydenottoa. Pyydä maksuton demo."
+        description="Holva rakentaa palveluyrityksille premium-verkkosivustoja, jotka vahvistavat brändiä, rakentavat luottamusta ja ohjaavat kohti yhteydenottoa."
         canonical="/"
       />
       <Hero />

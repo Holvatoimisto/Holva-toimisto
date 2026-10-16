@@ -11,7 +11,7 @@ interface SEOProps {
 const BASE = "https://holvatoimisto.fi";
 const DEFAULT_IMAGE = "/og-image.jpg";
 const DEFAULT_DESC =
-  "Rakennamme palveluyrityksille verkkosivustoja, jotka välittävät palvelun laadun, rakentavat luottamusta ja ohjaavat yhteydenottoon.";
+  "Holva rakentaa palveluyrityksille premium-verkkosivustoja, jotka vahvistavat brändiä, rakentavat luottamusta ja ohjaavat kohti yhteydenottoa.";
 
 export default function SEO({
   title,
